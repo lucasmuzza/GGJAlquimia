@@ -5,5 +5,6 @@ using UnityEngine;
 public class RecipeSO : MonoBehaviour
 {
     public string recipeName;
+    public int recipeRarityLevel;
     public List<IngredientSO> ingredients;
 }
