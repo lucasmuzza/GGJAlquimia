@@ -223,6 +223,8 @@ MonoBehaviour:
   optionsMenu: {fileID: 8859984}
   defaultKeyBinds:
   - {fileID: 2161755775874236477, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
+  - {fileID: -7982767975851491376, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
+  - {fileID: -833818357371318489, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
   inputKeyBinds: []
   OnBindUpdate:
     m_PersistentCalls:

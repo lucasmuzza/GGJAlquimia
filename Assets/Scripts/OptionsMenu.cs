@@ -29,6 +29,19 @@ public class OptionsMenu : MonoBehaviour
 
         _tabView = rootVisualElement.Q<TabView>("tabs");
         
+        foreach(var child in _tabView.Children())
+        {
+            var tabsDisplay = _tabView.Q<VisualElement>("unity-tab-view__content-container");
+            if(tabsDisplay != null) Debug.Log("Found tabs display");
+            if(child == tabsDisplay)
+            {
+                child.BringToFront();
+                _tabView.MarkDirtyRepaint();
+                break;
+            }
+        }
+
+        
         _bindsContainer = _tabView.Q<VisualElement>("bindsContainer");
 
         _rebindingDisplay = GetComponent<RebindingDisplay>();
