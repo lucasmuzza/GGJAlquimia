@@ -6,6 +6,7 @@ TagManager:
   tags:
   - npc
   - dialogueSystem
+  - Cauldron
   layers:
   - Default
   - TransparentFX
