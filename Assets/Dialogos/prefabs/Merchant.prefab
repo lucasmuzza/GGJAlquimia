@@ -106,6 +106,7 @@ MonoBehaviour:
   conversationSO: {fileID: 11400000, guid: 2edd31868ea096b4a91609d45e5a4de4, type: 2}
   enter: {fileID: 7400000, guid: 983d80fee46b0dc429a5ea86ad714a71, type: 2}
   leave: {fileID: 7400000, guid: 861691450bcf72346b827431c6803815, type: 2}
+  market: {fileID: 1219077429595001061, guid: 77943a81fcf93194085d56995f5d06b2, type: 3}
 --- !u!111 &2485244657879795419
 Animation:
   m_ObjectHideFlags: 0

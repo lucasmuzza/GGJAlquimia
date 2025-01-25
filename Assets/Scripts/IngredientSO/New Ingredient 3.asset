@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Ingredient 3
   m_EditorClassIdentifier: 
   ingredientName: test 4
-  ingredientDescription: 
+  ingredientDescription: "Teste de descri\xE7\xE3o"
   ingredientRarity: 1
   ingredientPrefab: {fileID: 8348013283779957691, guid: a3af662e83031aa4abe6a669abff70f7, type: 3}
   ingredientMaterial: {fileID: 0}

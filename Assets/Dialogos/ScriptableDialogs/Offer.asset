@@ -15,3 +15,7 @@ MonoBehaviour:
   offers:
   - ingredient: {fileID: 11400000, guid: fe8f8c9575cea474eaf890ed01a61b7d, type: 2}
     price: 50
+  - ingredient: {fileID: 11400000, guid: e71c15d9020f6a9448a8c4fdd484b262, type: 2}
+    price: 50
+  - ingredient: {fileID: 11400000, guid: 10a14f34cb1091546b69c831aaed57c4, type: 2}
+    price: 50
