@@ -6,6 +6,7 @@ public class PlayerInputHandler : MonoBehaviour
 {
     public PlayerInput playerInput;
     public UnityEvent<bool> onGamePaused = new UnityEvent<bool>();
+    public UnityEvent<string> onChangedSceneView = new UnityEvent<string>();
     public bool hasPaused;
     void Start()
     {
@@ -23,6 +24,18 @@ public class PlayerInputHandler : MonoBehaviour
         {
             hasPaused = false;
             onGamePaused?.Invoke(false);
+        }
+    }
+
+    public void ChangeViewInput(InputAction.CallbackContext context)
+    {
+        if(context.performed && context.action.name == "ChangeToPotionView")
+        {
+            onChangedSceneView?.Invoke("PotionView");
+        }
+        else if(context.performed && context.action.name == "ChangeToClientView")
+        {
+            onChangedSceneView?.Invoke("ClientView");
         }
     }
 }

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        cameras[1].gameObject.SetActive(false);
     }
     
     void Start()
@@ -35,11 +36,7 @@ public class GameManager : MonoBehaviour
         playerInputHandler = FindFirstObjectByType<PlayerInputHandler>();
 
         playerInputHandler.onGamePaused.AddListener(ToggleOptionsMenu);
-    }
-
-    void Update()
-    {
-        
+        playerInputHandler.onChangedSceneView.AddListener(ChangeCameraView);
     }
 
     private void ToggleOptionsMenu(bool hasPaused)
@@ -57,5 +54,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ChangeCameraView(string currentView)
+    {
+        if(!isGamePaused)
+        {
+            foreach (Camera camera in cameras)
+            {
+                camera.gameObject.SetActive(false); // Disable each camera
+            }
 
+            // Now, enable the camera based on the current view string
+            foreach (Camera camera in cameras)
+            {
+                if (camera.name == currentView)
+                {
+                    camera.gameObject.SetActive(true);
+                    break; 
+                }
+            }
+        }
+    }
 }
