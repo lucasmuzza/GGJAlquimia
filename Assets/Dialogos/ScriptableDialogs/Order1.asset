@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acd49e780daf7ab47ba78076d55b3c4a, type: 3}
-  m_Name: Conversa
+  m_Name: Order1
   m_EditorClassIdentifier: 
-  Falas:
-  - TextoDasFalas:
-    - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    - aaaaaaaaaaaaaaaaaaaaa
-  - TextoDasFalas:
-    - asdad
-    - asdadadsads
-    - as.
-  Nome: Glorbo
+  words:
+  - Personagem: {fileID: 0}
+    TextLines:
+    - "Bom Dia estou a procura de uma po\xE7\xE3o de cura"
+    - 'Eu sei que nela vai uma flor um osso e um chifre '
+  Name: "J\xE3o"
+  requestedPotion: 0

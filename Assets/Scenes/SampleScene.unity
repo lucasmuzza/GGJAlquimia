@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2d60861d57bac0749b60f3ec4c750031, type: 2}
     - target: {fileID: 2582485936793912601, guid: bc2c3f85c4c3c414aab1ea3940b5aedb, type: 3}
       propertyPath: m_TagString
-      value: DialogoManager
+      value: dialogueSystem
       objectReference: {fileID: 0}
     - target: {fileID: 7734012244764146765, guid: bc2c3f85c4c3c414aab1ea3940b5aedb, type: 3}
       propertyPath: m_Name
@@ -487,6 +487,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1349123179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349123181}
+  - component: {fileID: 1349123180}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1349123180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349123179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6870ca429da5df4ba059953535af280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - {fileID: 11400000, guid: 2d60861d57bac0749b60f3ec4c750031, type: 2}
+  - {fileID: 11400000, guid: ba36c7ba959761145980e7cb41646d6e, type: 2}
+  - {fileID: 11400000, guid: ba36c7ba959761145980e7cb41646d6e, type: 2}
+  npcs:
+  - {fileID: 8015995544444679221, guid: f7aa3d0e009b0c14d8d924974a5663e4, type: 3}
+  - {fileID: 8015995544444679221, guid: f7aa3d0e009b0c14d8d924974a5663e4, type: 3}
+  - {fileID: 8015995544444679221, guid: f7aa3d0e009b0c14d8d924974a5663e4, type: 3}
+  - {fileID: 8015995544444679221, guid: f7aa3d0e009b0c14d8d924974a5663e4, type: 3}
+  nextNpc: 32
+  givePotion: 9
+  instantiateLocation: {fileID: 0}
+  instantiatedNPCs: {fileID: 0}
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!4 &1349123181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349123179}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678517700
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,3 +633,4 @@ SceneRoots:
   - {fileID: 652855145}
   - {fileID: 802124355}
   - {fileID: 1678517703}
+  - {fileID: 1349123181}

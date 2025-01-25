@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - DialogoManager
+  - npc
+  - dialogueSystem
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NPC
   - Water
   - UI
   - 

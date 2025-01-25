@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 
-public class SistemaDialogo : MonoBehaviour
+public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private GameObject _caixaDeDialogo;
 
@@ -12,8 +12,8 @@ public class SistemaDialogo : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nomePersonagem;
     [SerializeField] private TextMeshProUGUI _textoFala;
 
-    private ConversaSO _conversaAtual;
-    public ConversaSO ConversaTeste;
+    private ConversationSO _conversaAtual;
+    public ConversationSO ConversaTeste;
     private int _indiceFalas;
     private Queue<string> _filaFalas;
    
@@ -29,7 +29,7 @@ public class SistemaDialogo : MonoBehaviour
     }    
 
 
-    public void IniciarDialogo(ConversaSO conversa)
+    public void IniciarDialogo(ConversationSO conversa)
     {        
         //Faz aparecer a caixa de dialogo
         _caixaDeDialogo.SetActive(true);
@@ -53,17 +53,17 @@ public class SistemaDialogo : MonoBehaviour
 
         if (_filaFalas.Count == 0)
         {
-            if (_indiceFalas < _conversaAtual.Falas.Length)
+            if (_indiceFalas < _conversaAtual.words.Length)
             {
                 //Coloca a imagem do personagem na caixa de diálogo e arruma o tamanho
                 //_avatarPersonagem.sprite = _conversaAtual.Falas[_indiceFalas].Personagem.Expressoes[_conversaAtual.Falas[_indiceFalas].IdDaExpressao];
                 //_avatarPersonagem.SetNativeSize();
 
                 //Coloca o nome do personagem na caixa de diálogo
-                _nomePersonagem.text = _conversaAtual.Nome;
+                _nomePersonagem.text = _conversaAtual.Name;
 
                 //Coloca todas as falas da expressão atual em uma fila
-                foreach (string textoFala in _conversaAtual.Falas[_indiceFalas].TextoDasFalas)
+                foreach (string textoFala in _conversaAtual.words[_indiceFalas].TextLines)
                 {
                     _filaFalas.Enqueue(textoFala);
                 }

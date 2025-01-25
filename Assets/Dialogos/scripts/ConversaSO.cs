@@ -1,20 +1,21 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Novo Dialogo", menuName = "Dialogo/Conversa")]
-public class ConversaSO : ScriptableObject
+[CreateAssetMenu(fileName = "New Fialogue", menuName = "Dialogue/Conversation")]
+public class ConversationSO : ScriptableObject
 {
-    public FalasDaConversa[] Falas;
-    public String Nome;
+    public ConversationLines[] words;
+    public String Name;
+    public Potion requestedPotion;
 }
 
 [System.Serializable]
-public class FalasDaConversa
+public class ConversationLines
 {
     
-    //public Personagem Personagem;
+    public CharacterSO Personagem;
     //public int IdDaExpressao;
 
     [TextArea]
-    public string[] TextoDasFalas;    
+    public string[] TextLines;    
 }

@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Novo Personagem", menuName = "Dialogo/Personagem")]
+[CreateAssetMenu(fileName = "New Character", menuName = "Dialogue/Character")]
 
-public class PersonagemSO : ScriptableObject
+public class CharacterSO : ScriptableObject
 {
-    public string Nome;
-    public Sprite[] Expressoes;
+    public string Name;
+    public Sprite[] Expressions;
 }
