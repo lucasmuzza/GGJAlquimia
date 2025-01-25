@@ -29,7 +29,7 @@ public class RebindingDisplay : MonoBehaviour
 
     private void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
         optionsMenu = GetComponent<OptionsMenu>();
 
         string rebinds = PlayerPrefs.GetString(RebindsKey, string.Empty);

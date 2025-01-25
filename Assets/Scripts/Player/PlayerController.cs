@@ -6,7 +6,12 @@ public class PlayerController : MonoBehaviour
     public Vector2 mousePosition;
     public Vector3 worldPosition;
 
+    public PlayerInputHandler playerInputHandler;
 
+    private void Start()
+    {
+        playerInputHandler = GetComponent<PlayerInputHandler>();
+    }
 
     private void Update()
     {
@@ -28,11 +33,5 @@ public class PlayerController : MonoBehaviour
         {
             bubble.PoppingBubble();
         }
-        
-        else
-        {
-            Debug.Log($"The object that was hit is: {hit.collider.gameObject}");
-        }
-        
     }
 }

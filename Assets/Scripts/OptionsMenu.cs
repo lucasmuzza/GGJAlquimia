@@ -8,14 +8,10 @@ public class OptionsMenu : MonoBehaviour
     public UIDocument optionsMenuUIDoc;
     public VisualTreeAsset bindTemplate;
 
-    private VisualElement _rootVisualElement;
+    public VisualElement rootVisualElement;
     private VisualElement _bindsContainer;
 
     private TabView _tabView;
-    private Tab _tab;
-
-    private Label _bindTitle;
-    private Label _currentBind;
 
     private Button _saveBindsButton;
     private Button _resetBindsButton;
@@ -27,9 +23,11 @@ public class OptionsMenu : MonoBehaviour
     void Start()
     {
         optionsMenuUIDoc = GetComponent<UIDocument>();
-        _rootVisualElement = optionsMenuUIDoc.rootVisualElement;
 
-        _tabView = _rootVisualElement.Q<TabView>("tabs");
+        rootVisualElement = optionsMenuUIDoc.rootVisualElement;
+        rootVisualElement.style.display = DisplayStyle.None;
+
+        _tabView = rootVisualElement.Q<TabView>("tabs");
         
         _bindsContainer = _tabView.Q<VisualElement>("bindsContainer");
 
@@ -43,10 +41,7 @@ public class OptionsMenu : MonoBehaviour
         _resetBindsButton = _bindsContainer.Q<Button>("resetButton");
         _resetBindsButton.clicked += _rebindingDisplay.ResetBinds;
 
-        if (_bindsContainer != null)
-        {
-            DisplayDefaultBinds();
-        }
+        DisplayDefaultBinds();
     }
 
     #region  Rebinding Tab Functions

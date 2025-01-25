@@ -24,6 +24,8 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private List<GameObject> _generatedBubbles;
     public Queue<GameObject> bubbleQueue = new Queue<GameObject>(); // Queue for bubble management
 
+    private bool isSpawningPaused = false; // Flag to pause/resume the spawning coroutine
+
     private void Awake()
     {
         if (instance == null)
@@ -52,14 +54,11 @@ public class BubbleManager : MonoBehaviour
 
         GenerateBubbles();
 
-        // Add all generated bubbles to the queue
-        // foreach (var bubble in _generatedBubbles)
-        // {
-        //     bubbleQueue.Enqueue(bubble);
-        // }
-
         // Start activating bubbles at intervals
         StartCoroutine(ActivateBubblesWithInterval());
+
+        // Subscribe to the game pause event
+        GameManager.instance.playerInputHandler.onGamePaused.AddListener(OnGamePauseChanged);
     }
 
     private void GenerateBubbles()
@@ -74,7 +73,10 @@ public class BubbleManager : MonoBehaviour
 
     private void Update()
     {
-        MoveActiveBubbles();
+        if (!GameManager.instance.isGamePaused)
+        {
+            MoveActiveBubbles();
+        }
     }
 
     private void MoveActiveBubbles()
@@ -111,12 +113,30 @@ public class BubbleManager : MonoBehaviour
     {
         while (bubbleQueue.Count > 0)
         {
+            // Pause the coroutine if spawning is paused
+            while (isSpawningPaused)
+            {
+                yield return null; // Wait until the game is unpaused
+            }
+
             // Get the next bubble from the queue
             GameObject bubble = bubbleQueue.Dequeue();
             bubble.SetActive(true); // Activate the bubble
 
             // Wait for the spawn interval before activating the next bubble
             yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    private void OnGamePauseChanged(bool isPaused)
+    {
+        if (isPaused)
+        {
+            isSpawningPaused = true;
+        }
+        else
+        {
+            isSpawningPaused = false;
         }
     }
 
@@ -141,11 +161,6 @@ public class BubbleManager : MonoBehaviour
         currentBubblesAmount++;
     }
 
-
-    /// <summary>
-    /// Removes the bubble from the queue and list if needed.
-    /// </summary>
-    /// <param name="bubble"></param>
     public void RemoveBubble(GameObject bubble)
     {
         if (bubbleQueue.Contains(bubble))
