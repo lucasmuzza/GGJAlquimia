@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class IngredientStock : MonoBehaviour
 {
+    public static IngredientStock instance;
+
     [Header("Stock Lists")]
     public List<IngredientSO> initialIngredientsStock;
     public List<IngredientSO> currentStock;
@@ -21,11 +23,19 @@ public class IngredientStock : MonoBehaviour
     [SerializeField] private List<IngredientSO> rareIngredientPool;
 
 
-    private void Start()
+    private void Awake()
     {
-        SelectInitialStock(initialIngredientsAmount);
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {   
+            Destroy(gameObject);
+        }
 
-        currentStock = new List<IngredientSO>(initialIngredientsStock);
+        SelectInitialStock(initialIngredientsAmount);
     }
 
     /// <summary>
@@ -63,20 +73,20 @@ public class IngredientStock : MonoBehaviour
         {
             float randomValue = Random.Range(0f, 1f);
 
-            if (randomValue >= commonProbability && commonIngredientPool.Count > 0)
+            if (randomValue < commonProbability && commonIngredientPool.Count > 0)
             {
                 // Pick a random ingredient from the common pool
                 int randomIndex = Random.Range(0, commonIngredientPool.Count);
-                IngredientSO selectedIngredient = commonIngredientPool[randomIndex];
-                initialIngredientsStock.Add(selectedIngredient);
+                initialIngredientsStock.Add(commonIngredientPool[randomIndex]);
             }
-            else if (randomValue <= rareProbability && rareIngredientPool.Count > 0)
+            else if (rareIngredientPool.Count > 0)
             {
                 // Pick a random ingredient from the rare pool
                 int randomIndex = Random.Range(0, rareIngredientPool.Count);
-                IngredientSO selectedIngredient = rareIngredientPool[randomIndex];
-                initialIngredientsStock.Add(selectedIngredient);
+                initialIngredientsStock.Add(rareIngredientPool[randomIndex]);
             }
         }
+
+        currentStock = new List<IngredientSO>(initialIngredientsStock);
     }
 }

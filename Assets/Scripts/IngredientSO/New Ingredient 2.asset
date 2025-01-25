@@ -15,5 +15,5 @@ MonoBehaviour:
   ingredientName: test 3
   ingredientDescription: 
   ingredientRarity: 1
-  ingredientPrefab: {fileID: 0}
+  ingredientPrefab: {fileID: 8348013283779957691, guid: a3af662e83031aa4abe6a669abff70f7, type: 3}
   ingredientMaterial: {fileID: 0}

@@ -1,0 +1,15 @@
+#currentBind {
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+}
+
+#bindTitle {
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+}
