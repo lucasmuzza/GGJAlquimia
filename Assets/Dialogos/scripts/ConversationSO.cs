@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Fialogue", menuName = "Dialogue/Conversation")]
+[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/Conversation")]
 public class ConversationSO : ScriptableObject
 {
     public ConversationLines[] words;
