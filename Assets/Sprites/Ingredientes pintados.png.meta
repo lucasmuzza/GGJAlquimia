@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: 747369a50eb97af4db05183ef76ac96c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7632955289391753916
+    second: Ingredientes pintados_0
+  - first:
+      213: 6789152069755009907
+    second: Ingredientes pintados_1
+  - first:
+      213: -436211952717844466
+    second: Ingredientes pintados_2
+  - first:
+      213: -2093292001370675498
+    second: Ingredientes pintados_3
+  - first:
+      213: 990236521842117860
+    second: Ingredientes pintados_4
+  - first:
+      213: 2839364996532953690
+    second: Ingredientes pintados_5
+  - first:
+      213: 5971569201214194500
+    second: Ingredientes pintados_6
+  - first:
+      213: 6735394234313382782
+    second: Ingredientes pintados_7
+  - first:
+      213: -2493636626934030294
+    second: Ingredientes pintados_8
+  - first:
+      213: -5581757892005421457
+    second: Ingredientes pintados_9
+  - first:
+      213: -2266494517693487811
+    second: Ingredientes pintados_10
+  - first:
+      213: 1285106527919362152
+    second: Ingredientes pintados_11
+  - first:
+      213: 8687076019585525870
+    second: Ingredientes pintados_12
+  - first:
+      213: -1359696288142179473
+    second: Ingredientes pintados_13
+  - first:
+      213: 3228782233590101586
+    second: Ingredientes pintados_14
+  - first:
+      213: -6149765426465529407
+    second: Ingredientes pintados_15
+  - first:
+      213: -3487790249052303042
+    second: Ingredientes pintados_16
+  - first:
+      213: -3950335578610966247
+    second: Ingredientes pintados_17
+  - first:
+      213: 4384890824882386277
+    second: Ingredientes pintados_18
+  - first:
+      213: 6370250266682724553
+    second: Ingredientes pintados_19
+  - first:
+      213: -2759907397579346309
+    second: Ingredientes pintados_20
+  - first:
+      213: 1712100112437624280
+    second: Ingredientes pintados_21
+  - first:
+      213: -86770391643281722
+    second: Ingredientes pintados_22
+  - first:
+      213: -154276027140338617
+    second: Ingredientes pintados_23
+  - first:
+      213: 6959487012348556145
+    second: Ingredientes pintados_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ingredientes pintados_0
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 3285
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d509212071e6a1248be6086cf463aeb6
+      internalID: -1375740327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2678
+        width: 527
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8daae77b90d9b448e095530881bf27
+      internalID: 1402121503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_2
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 2687
+        width: 713
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf33abd773f1f874785101fb3b962385
+      internalID: -1121842928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_3
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 2661
+        width: 584
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433d3edf970b05b4dbc0131ec2a1ac1b
+      internalID: 1130321176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2123
+        width: 716
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f5fa8cd2be66747a3ade83e15d00c3
+      internalID: -645649043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_6
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2106
+        width: 745
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c2dc8007f7c3247a840d114ed546f4
+      internalID: 2086099653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_7
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 2128
+        width: 762
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16491f6b48c6ff142b31b390983c428c
+      internalID: -1054045774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1536
+        width: 577
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05122283adb416143af4707d8a280f28
+      internalID: -953898427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_10
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1585
+        width: 334
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54dceb5b9f8b1e41ba4acb8531e6ea3
+      internalID: 20285114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_11
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1650
+        width: 199
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9eab6776799e64eacee60dc56220d7
+      internalID: 729723296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_12
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1545
+        width: 485
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c8fb5b6e66b614cbdf75482a95f1e7
+      internalID: 392946410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 696
+        width: 563
+        height: 733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03742d62d6fa99c42be8df11d3d7f9f8
+      internalID: -591025806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_18
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 931
+        width: 713
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d146d971d2fb79140ac8f46cb6ef877c
+      internalID: -1940318081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes pintados_26
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 211
+        width: 851
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeaa4f0385ecc549a8a2ee13c5c6f66
+      internalID: -354506618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e03e7cad74127044d9498daeb7364267
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ingredientes pintados_0: -1375740327
+      Ingredientes pintados_1: 1402121503
+      Ingredientes pintados_10: 20285114
+      Ingredientes pintados_11: 729723296
+      Ingredientes pintados_12: 392946410
+      Ingredientes pintados_13: 971792579
+      Ingredientes pintados_14: -591025806
+      Ingredientes pintados_15: 141945222
+      Ingredientes pintados_16: -873297665
+      Ingredientes pintados_17: -294828576
+      Ingredientes pintados_18: -1940318081
+      Ingredientes pintados_19: 701795271
+      Ingredientes pintados_2: -1121842928
+      Ingredientes pintados_20: 861970966
+      Ingredientes pintados_21: -1534158053
+      Ingredientes pintados_22: -989541485
+      Ingredientes pintados_23: 532409983
+      Ingredientes pintados_24: 242037498
+      Ingredientes pintados_25: 33770322
+      Ingredientes pintados_26: -354506618
+      Ingredientes pintados_27: -1629238917
+      Ingredientes pintados_28: -1295337599
+      Ingredientes pintados_29: -278771424
+      Ingredientes pintados_3: 1130321176
+      Ingredientes pintados_4: -645649043
+      Ingredientes pintados_5: 521376332
+      Ingredientes pintados_6: 2086099653
+      Ingredientes pintados_7: -1054045774
+      Ingredientes pintados_8: 214778808
+      Ingredientes pintados_9: -953898427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

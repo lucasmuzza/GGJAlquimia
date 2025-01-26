@@ -6,6 +6,7 @@ public class Bubble : MonoBehaviour
 {
     public BubbleManager bubbleManagerInstance;
     public IngredientSO bubbleIngrendient;
+    public SpriteRenderer ingredientSpriteHolder;
     public BoxCollider2D boxCollider;
 
     private AudioManager _audioManager;
@@ -17,6 +18,8 @@ public class Bubble : MonoBehaviour
         _audioManager = AudioManager.instance;
 
         boxCollider = GetComponent<BoxCollider2D>();
+
+        ingredientSpriteHolder.sprite = bubbleIngrendient.ingredientIcon;
     }
 
     public void PoppingBubble()

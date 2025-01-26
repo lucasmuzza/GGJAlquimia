@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89e1a7e71f01ea5498a36a0cf09efbad, type: 3}
-  m_Name: "Cora\xE7\xE3oDaVontade"
+  m_Name: ConchaDaVontade
   m_EditorClassIdentifier: 
-  ingredientName: "Cora\xE7\xE3o da Verdade"
+  ingredientName: Concha da Vontade
   ingredientDescription: 
   ingredientRarity: 1
   ingredientPrefab: {fileID: 8348013283779957691, guid: a3af662e83031aa4abe6a669abff70f7, type: 3}
   ingredientMaterial: {fileID: 0}
-  ingredientIcon: {fileID: 7220114791984264652, guid: 10d3643d91dae7546a095373b156d2c4, type: 3}
+  ingredientIcon: {fileID: 729723296, guid: 747369a50eb97af4db05183ef76ac96c, type: 3}

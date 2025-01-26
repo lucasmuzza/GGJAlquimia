@@ -1,13 +1,14 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/recipes.uss?fileID=7433441132597879392&amp;guid=2f16e2de9fcbe504a8f5d88fcf27c386&amp;type=3#recipes" />
-    <engine:VisualElement name="root" style="flex-grow: 1;">
-        <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 100px; top: 50px;">
-            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 60px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); color: rgb(255, 255, 255);" />
+    <engine:VisualElement name="root" style="flex-grow: 1; left: 100px;">
+        <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 200px; align-items: center; justify-content: center; align-self: flex-start; right: auto; top: 20px; left: -50px;">
+            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 60px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); color: rgb(255, 255, 255); margin-left: 80px;" />
+            <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Ingredientes%20pintados.png?fileID=-1940318081&amp;guid=747369a50eb97af4db05183ef76ac96c&amp;type=3#Ingredientes pintados_18&quot;); width: 80px; height: 40px; left: auto; top: -100px; align-items: center; justify-content: space-around; align-self: flex-start; margin-right: 30px;" />
         </engine:VisualElement>
-        <engine:VisualElement name="OrderContainer" style="flex-grow: 0; max-width: 750px; max-height: 200px; height: 100px; align-items: flex-start; left: 100px; justify-content: center; align-self: flex-start; background-color: rgba(0, 0, 0, 0.65); width: 750px; top: -50px;">
-            <engine:Button text="Desistir do Cliente" name="DropClientButton" style="top: 100px; align-self: stretch; justify-content: center; align-items: stretch; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 30px;" />
+        <engine:VisualElement name="OrderContainer" style="flex-grow: 0; max-width: 750px; max-height: 200px; height: 100px; align-items: flex-start; left: auto; justify-content: center; align-self: flex-end; background-color: rgba(0, 0, 0, 0.65); width: 500px; top: -180px; right: 150px;">
+            <engine:Button text="Desistir do Cliente" name="DropClientButton" style="top: 100px; align-self: stretch; justify-content: center; align-items: stretch; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 30px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgb(106, 100, 86); color: rgb(255, 255, 255);" />
         </engine:VisualElement>
-        <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 125px; right: 100px;">
+        <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 155px; right: 150px;">
             <engine:TabView style="width: 500px; height: 600px;">
                 <engine:Tab label="Primeira Pagina">
                     <engine:VisualElement name="page" style="flex-grow: 1; width: 500px; height: 600px; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%201.png?fileID=2800000&amp;guid=9dda58cdb76969d4aa30eb00a43cb44e&amp;type=3#Pagina poções nivel 1&quot;); align-self: center; justify-content: center;">
@@ -50,6 +51,6 @@
                 </engine:Tab>
             </engine:TabView>
         </engine:VisualElement>
-        <engine:Label text="Label" name="TimerLabel" style="bottom: 50px; left: 100px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 45px; color: rgb(255, 255, 255);" />
+        <engine:Label text="Label" name="TimerLabel" style="bottom: 20px; left: -50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 45px; color: rgb(255, 255, 255);" />
     </engine:VisualElement>
 </engine:UXML>

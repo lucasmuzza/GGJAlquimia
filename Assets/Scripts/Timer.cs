@@ -62,8 +62,6 @@ public class Timer : MonoBehaviour
             // Increase elapsed time
             elapsedTime += Time.deltaTime;
 
-            // Notify listeners about the updated tim
-            Debug.Log(elapsedTime);
             _timerLabel.text = elapsedTime.ToString("F2");
         }
     }

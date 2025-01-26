@@ -1,0 +1,1342 @@
+fileFormatVersion: 2
+guid: a9f2db4b79bd06a4b8cca2f06ff1821a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7619686809951859594
+    second: Ingredientes na bolha_0
+  - first:
+      213: 3590120840152085435
+    second: Ingredientes na bolha_1
+  - first:
+      213: 8845845775462510907
+    second: Ingredientes na bolha_2
+  - first:
+      213: -6732094485463657429
+    second: Ingredientes na bolha_3
+  - first:
+      213: 8702337249775080462
+    second: Ingredientes na bolha_4
+  - first:
+      213: -748931401785730175
+    second: Ingredientes na bolha_5
+  - first:
+      213: -1906468790393111135
+    second: Ingredientes na bolha_6
+  - first:
+      213: 6359274837988008965
+    second: Ingredientes na bolha_7
+  - first:
+      213: 5467100235914919692
+    second: Ingredientes na bolha_8
+  - first:
+      213: -7870011387879245512
+    second: Ingredientes na bolha_9
+  - first:
+      213: 7077583300456786079
+    second: Ingredientes na bolha_10
+  - first:
+      213: 7335298873356149689
+    second: Ingredientes na bolha_11
+  - first:
+      213: 3799353311107776756
+    second: Ingredientes na bolha_12
+  - first:
+      213: -4854029239476028344
+    second: Ingredientes na bolha_13
+  - first:
+      213: 9196084719122845515
+    second: Ingredientes na bolha_14
+  - first:
+      213: -5669613939368171668
+    second: Ingredientes na bolha_15
+  - first:
+      213: 950927186716005960
+    second: Ingredientes na bolha_16
+  - first:
+      213: -6562105247772417124
+    second: Ingredientes na bolha_17
+  - first:
+      213: -4901102380308687214
+    second: Ingredientes na bolha_18
+  - first:
+      213: 6798214699683538730
+    second: Ingredientes na bolha_19
+  - first:
+      213: -7313515120654208222
+    second: Ingredientes na bolha_20
+  - first:
+      213: -8373863441331399526
+    second: Ingredientes na bolha_21
+  - first:
+      213: -2182227901620312358
+    second: Ingredientes na bolha_22
+  - first:
+      213: 7404512176573328586
+    second: Ingredientes na bolha_23
+  - first:
+      213: 7571600697801710959
+    second: Ingredientes na bolha_24
+  - first:
+      213: 8083400123943261084
+    second: Ingredientes na bolha_25
+  - first:
+      213: -6089393006138055513
+    second: Ingredientes na bolha_26
+  - first:
+      213: 180400300978563505
+    second: Ingredientes na bolha_27
+  - first:
+      213: -6449945384559842804
+    second: Ingredientes na bolha_28
+  - first:
+      213: 6979877816400646667
+    second: Ingredientes na bolha_29
+  - first:
+      213: 1799291796412295106
+    second: Ingredientes na bolha_30
+  - first:
+      213: -7757488628154056861
+    second: Ingredientes na bolha_31
+  - first:
+      213: 858668504903655797
+    second: Ingredientes na bolha_32
+  - first:
+      213: -7750869522816299114
+    second: Ingredientes na bolha_33
+  - first:
+      213: -8389174564371529792
+    second: Ingredientes na bolha_34
+  - first:
+      213: 4877710306101199952
+    second: Ingredientes na bolha_35
+  - first:
+      213: -7810310752434788550
+    second: Ingredientes na bolha_36
+  - first:
+      213: -3542698033062123001
+    second: Ingredientes na bolha_37
+  - first:
+      213: -884113862405306660
+    second: Ingredientes na bolha_38
+  - first:
+      213: 546805668477953099
+    second: Ingredientes na bolha_39
+  - first:
+      213: 3480670476867345347
+    second: Ingredientes na bolha_40
+  - first:
+      213: -6216657102507044142
+    second: Ingredientes na bolha_41
+  - first:
+      213: -4923869390186209211
+    second: Ingredientes na bolha_42
+  - first:
+      213: -1007837138775552115
+    second: Ingredientes na bolha_43
+  - first:
+      213: 3973446003447787042
+    second: Ingredientes na bolha_44
+  - first:
+      213: -7330619777172936771
+    second: Ingredientes na bolha_45
+  - first:
+      213: -5610451143582058985
+    second: Ingredientes na bolha_46
+  - first:
+      213: 7715706041164848023
+    second: Ingredientes na bolha_47
+  - first:
+      213: -4759746524169118415
+    second: Ingredientes na bolha_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ingredientes na bolha_0
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 3739
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c0719973f614690800000000000000
+      internalID: -7619686809951859594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_1
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 4288
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3fdf102eba2d130800000000000000
+      internalID: 3590120840152085435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3482
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3135509dd1c2ca70800000000000000
+      internalID: 8845845775462510907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 4031
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24929fcbbbc292a0800000000000000
+      internalID: -6732094485463657429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_4
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 3776
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e045e782f99e4c870800000000000000
+      internalID: 8702337249775080462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_5
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 3736
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b1d6babd24b95f0800000000000000
+      internalID: -748931401785730175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 3519
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1adff3d6cbcda85e0800000000000000
+      internalID: -1906468790393111135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_7
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3479
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504ea53b5cea04850800000000000000
+      internalID: 6359274837988008965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_8
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 2928
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fb929d2ba0fdb40800000000000000
+      internalID: 5467100235914919692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_9
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 3477
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839bd2ff65a18c290800000000000000
+      internalID: -7870011387879245512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_10
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 2750
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98a6fb5380a83260800000000000000
+      internalID: 7077583300456786079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_11
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 3299
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b367b316773cc560800000000000000
+      internalID: 7335298873356149689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_12
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 2965
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f088c4e4b30ab430800000000000000
+      internalID: 3799353311107776756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_13
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 2925
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cfbabdf1603acb0800000000000000
+      internalID: -4854029239476028344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_14
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2787
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f07bf345e0f9f70800000000000000
+      internalID: 9196084719122845515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 2747
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c676b5a392c7151b0800000000000000
+      internalID: -5669613939368171668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_16
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 2219
+        width: 749
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8461873fc3f523d00800000000000000
+      internalID: 950927186716005960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_17
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 2768
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c936ccf6b08bee4a0800000000000000
+      internalID: -6562105247772417124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_18
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 2006
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29611ed2a59cbfbb0800000000000000
+      internalID: -4901102380308687214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_19
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 2555
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27e979304c185e50800000000000000
+      internalID: 6798214699683538730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_20
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 2554
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22335f51fbc218a90800000000000000
+      internalID: -7313515120654208222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_21
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 2533
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94dfc5119f0acb80800000000000000
+      internalID: -8373863441331399526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_22
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 2446
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6a9f0194b27b1e0800000000000000
+      internalID: -2182227901620312358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_23
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 2463
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc25b3089c12c660800000000000000
+      internalID: 7404512176573328586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_24
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2256
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d1295f7bab31960800000000000000
+      internalID: 7571600697801710959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_25
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 2359
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c939cf4c5910e2070800000000000000
+      internalID: 8083400123943261084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_26
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 2216
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4a46be2512e7ba0800000000000000
+      internalID: -6089393006138055513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2043
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b963313e19e08200800000000000000
+      internalID: 180400300978563505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_28
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2003
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ae3a498d03d76a0800000000000000
+      internalID: -6449945384559842804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_29
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1479
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02903e94e18dd060800000000000000
+      internalID: 6979877816400646667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_30
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 2028
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7ed641b5e58f810800000000000000
+      internalID: 1799291796412295106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_31
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1304
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fbeb1913dd75490800000000000000
+      internalID: -7757488628154056861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_32
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1853
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571299ea47a9aeb00800000000000000
+      internalID: 858668504903655797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_33
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1516
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f02202c316f6490800000000000000
+      internalID: -7750869522816299114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_34
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 1476
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf74e37e2aa39b80800000000000000
+      internalID: -8389174564371529792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_35
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1341
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0548c602eab11b340800000000000000
+      internalID: 4877710306101199952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_36
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1301
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37e5bf50c33c9390800000000000000
+      internalID: -7810310752434788550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_37
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 591
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a6bd0b8eec5dec0800000000000000
+      internalID: -3542698033062123001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_38
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1140
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6455a502ffab3f0800000000000000
+      internalID: -884113862405306660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_39
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 618
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b446ccebbd4a69700800000000000000
+      internalID: 546805668477953099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_40
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 1167
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb1ed97b53dd4030800000000000000
+      internalID: 3480670476867345347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_41
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 628
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d298a27d4ff9b9a0800000000000000
+      internalID: -6216657102507044142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_42
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 655
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540288d90e6eaabb0800000000000000
+      internalID: -4923869390186209211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_43
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 615
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f46d746717302f0800000000000000
+      internalID: -1007837138775552115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_44
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 62
+        width: 615
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e63b18614842730800000000000000
+      internalID: 3973446003447787042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_45
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 611
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db76726e628644a90800000000000000
+      internalID: -7330619777172936771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_46
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 588
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7167b1d096ca322b0800000000000000
+      internalID: -5610451143582058985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_47
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 99
+        width: 136
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b57fec3c1b31b60800000000000000
+      internalID: 7715706041164848023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ingredientes na bolha_48
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 59
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ddff521cbf1fdb0800000000000000
+      internalID: -4759746524169118415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
