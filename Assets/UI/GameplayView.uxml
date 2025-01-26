@@ -2,9 +2,12 @@
     <Style src="project://database/Assets/UI/recipes.uss?fileID=7433441132597879392&amp;guid=2f16e2de9fcbe504a8f5d88fcf27c386&amp;type=3#recipes" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
         <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 100px; top: 50px;">
-            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 60px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
+            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 60px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); color: rgb(255, 255, 255);" />
         </engine:VisualElement>
-        <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 325px; right: 100px;">
+        <engine:VisualElement name="OrderContainer" style="flex-grow: 0; max-width: 750px; max-height: 200px; height: 100px; align-items: flex-start; left: 100px; justify-content: center; align-self: flex-start; background-color: rgba(0, 0, 0, 0.65); width: 750px; top: -50px;">
+            <engine:Button text="Desistir do Cliente" name="DropClientButton" style="top: 100px; align-self: stretch; justify-content: center; align-items: stretch; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 30px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 125px; right: 100px;">
             <engine:TabView style="width: 500px; height: 600px;">
                 <engine:Tab label="Primeira Pagina">
                     <engine:VisualElement name="page" style="flex-grow: 1; width: 500px; height: 600px; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%201.png?fileID=2800000&amp;guid=9dda58cdb76969d4aa30eb00a43cb44e&amp;type=3#Pagina poções nivel 1&quot;); align-self: center; justify-content: center;">
@@ -32,20 +35,21 @@
                         <engine:Label text="Ingredientes: Bico de Grifo, Flor de Golem,&#10; Escama de Dragão e Pena de Harpia" name="potionIngredients" class="pageTexts" style="top: 60px; right: 50px; left: auto;" />
                     </engine:VisualElement>
                 </engine:Tab>
-                <engine:Tab label="Terceira Pagina">
+                <engine:Tab label="Terceira Pagina" name="Tab">
                     <engine:VisualElement name="page" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%203.png?fileID=2800000&amp;guid=5a34bbf0a32c0264ba34e659a0525c79&amp;type=3#Pagina poções nivel 3&quot;); width: 500px; height: 600px; align-self: center; justify-content: center;">
                         <engine:Label text="Poção da Verdade" name="potionTitle" class="pageTexts" style="top: -30px; -unity-font-style: normal; left: 50px;" />
                         <engine:Label text="Será obrigado a dizer a verdade" name="potionDescription" class="pageTexts" style="top: -30px; left: 50px;" />
-                        <engine:Label text="Ingredientes: Olho do Ciclope, &#10;Bico de Grifom, Gema do Abismo,  &#10;Lagrima de Anjo e Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: -30px;" />
+                        <engine:Label text="Ingredientes: Olho do Ciclope, &#10;Bico de Grifom, Gema do Abismo,  &#10;Lagrima de Anjo e Concha da Vontade" name="potionIngredients" class="pageTexts" style="top: -30px;" />
                         <engine:Label text="Poção de Elevação Primordial" name="potionTitle" class="pageTexts" style="top: 15px; -unity-font-style: normal; left: -50px;" />
                         <engine:Label text="Obtem parte do poder de uma das sete/oito entidades primordiais" name="potionDescription" class="pageTexts" style="top: 15px; left: -50px;" />
-                        <engine:Label text="Ingredientes: Tentáculo de Kraken; Escama de Dragão,&#10; Gema do Abismo, Lagrima de Anjo e &#10;Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: 15px; left: -50px;" />
+                        <engine:Label text="Ingredientes: Tentáculo de Kraken; Escama de Dragão,&#10; Gema do Abismo, Lagrima de Anjo e &#10;Concha da Vontade" name="potionIngredients" class="pageTexts" style="top: 15px; left: -50px;" />
                         <engine:Label text="Poção da Ressureição" name="thirdPotionTitle" class="pageTexts" style="top: 60px; -unity-font-style: normal; left: 50px;" />
                         <engine:Label text="Traz um individuo de volta a vida" name="potionDescription" class="pageTexts" style="top: 60px; left: 50px;" />
-                        <engine:Label text="Ingredientes: Osso de Lith,&#10; Flor de Golem, Gema do Abismo,  &#10;Lagrima de Anjo e Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: 50px;" />
+                        <engine:Label text="Ingredientes: Osso de Lith,&#10; Flor de Golem, Gema do Abismo,  &#10;Lagrima de Anjo e Concha da Vontade" name="potionIngredients" class="pageTexts" style="top: 50px;" />
                     </engine:VisualElement>
                 </engine:Tab>
             </engine:TabView>
         </engine:VisualElement>
+        <engine:Label text="Label" name="TimerLabel" style="bottom: 50px; left: 100px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 45px; color: rgb(255, 255, 255);" />
     </engine:VisualElement>
 </engine:UXML>

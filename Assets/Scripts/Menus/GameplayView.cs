@@ -7,8 +7,7 @@ public class GameplayView : MonoBehaviour
 
     public UIDocument gameplayUIDoc;
     private VisualElement _rootVisualElement;
-    private Label _moneyLabel;
-    
+    private Label _moneyLabel;    
     private void Start()
     {
         scoreManagerInstance = ScoreManager.instance;
