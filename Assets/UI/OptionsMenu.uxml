@@ -17,5 +17,6 @@
                 </engine:Tab>
             </engine:TabView>
         </engine:VisualElement>
+        <engine:Button text="Main Menu" name="mainMenuButton" class="UIButtons" style="position: absolute; left: 605px; top: 20px; width: 140px; font-size: 20px;" />
     </engine:VisualElement>
 </engine:UXML>

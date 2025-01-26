@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="root" style="flex-grow: 1;">
+        <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 50px; top: 50px;">
+            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 35px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

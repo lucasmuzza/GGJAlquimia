@@ -6,6 +6,7 @@ public class Ingredient : MonoBehaviour
 {
     public IngredientSO ingredient;
     public Rigidbody2D rb;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6246664559070504097}
   - component: {fileID: 4642433328205084952}
   m_Layer: 3
-  m_Name: Square
+  m_Name: NPCPrefab
   m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

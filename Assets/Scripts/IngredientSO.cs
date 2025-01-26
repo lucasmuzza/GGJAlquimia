@@ -15,4 +15,5 @@ public class IngredientSO : ScriptableObject
     public IngredientRarity ingredientRarity;
     public GameObject ingredientPrefab;
     public Material ingredientMaterial;
+    public Sprite ingredientIcon;
 }

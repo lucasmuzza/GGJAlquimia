@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class OptionsMenu : MonoBehaviour
@@ -13,6 +14,7 @@ public class OptionsMenu : MonoBehaviour
 
     private TabView _tabView;
 
+    private Button _mainMenuButton;
     private Button _saveBindsButton;
     private Button _resetBindsButton;
     
@@ -28,19 +30,9 @@ public class OptionsMenu : MonoBehaviour
         rootVisualElement.style.display = DisplayStyle.None;
 
         _tabView = rootVisualElement.Q<TabView>("tabs");
-        
-        foreach(var child in _tabView.Children())
-        {
-            var tabsDisplay = _tabView.Q<VisualElement>("unity-tab-view__content-container");
-            if(tabsDisplay != null) Debug.Log("Found tabs display");
-            if(child == tabsDisplay)
-            {
-                child.BringToFront();
-                _tabView.MarkDirtyRepaint();
-                break;
-            }
-        }
 
+        _mainMenuButton = rootVisualElement.Q<Button>("mainMenuButton");
+        _mainMenuButton.clicked += LoadMainMenu;
         
         _bindsContainer = _tabView.Q<VisualElement>("bindsContainer");
 
@@ -55,6 +47,11 @@ public class OptionsMenu : MonoBehaviour
         _resetBindsButton.clicked += _rebindingDisplay.ResetBinds;
 
         DisplayDefaultBinds();
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     #region  Rebinding Tab Functions
