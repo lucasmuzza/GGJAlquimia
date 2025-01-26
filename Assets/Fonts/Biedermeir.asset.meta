@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Fonts/Biedermeir.asset.meta
 guid: 7d84680a702ec374ca561e080c806b62
+========
+guid: 57e8d2e8021ad2a4fb60af70da1a1500
+>>>>>>>> Developer:Assets/Fonts/GameFont.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

@@ -10,11 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89e1a7e71f01ea5498a36a0cf09efbad, type: 3}
+<<<<<<<< HEAD:Assets/Scripts/IngredientSO/FlorDeGolem.asset
   m_Name: FlorDeGolem
   m_EditorClassIdentifier: 
   ingredientName: Flor de Golem
+========
+  m_Name: OssoDeLith
+  m_EditorClassIdentifier: 
+  ingredientName: Osso de Lith
+>>>>>>>> Developer:Assets/Scripts/IngredientSO/OssoDeLith.asset
   ingredientDescription: 
   ingredientRarity: 0
   ingredientPrefab: {fileID: 8348013283779957691, guid: a3af662e83031aa4abe6a669abff70f7, type: 3}
   ingredientMaterial: {fileID: 0}
+<<<<<<<< HEAD:Assets/Scripts/IngredientSO/FlorDeGolem.asset
   ingredientIcon: {fileID: 1649883304966909098, guid: 10d3643d91dae7546a095373b156d2c4, type: 3}
+========
+  ingredientIcon: {fileID: -6389791878911158278, guid: 10d3643d91dae7546a095373b156d2c4, type: 3}
+>>>>>>>> Developer:Assets/Scripts/IngredientSO/OssoDeLith.asset

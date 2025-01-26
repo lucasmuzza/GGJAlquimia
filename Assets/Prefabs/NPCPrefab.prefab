@@ -12,13 +12,8 @@ GameObject:
   - component: {fileID: 7229926116100884316}
   - component: {fileID: 6246664559070504097}
   - component: {fileID: 4642433328205084952}
-  - component: {fileID: 4900630334586376855}
   m_Layer: 3
-<<<<<<<< HEAD:Assets/Dialogos/prefabs/NPC.prefab
-  m_Name: NPC
-========
   m_Name: NPCPrefab
->>>>>>>> Developer:Assets/Prefabs/NPCPrefab.prefab
   m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8015995544444679221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2924, y: 3.9245, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,12 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationSO: {fileID: 11400000, guid: 2d60861d57bac0749b60f3ec4c750031, type: 2}
-<<<<<<<< HEAD:Assets/Dialogos/prefabs/NPC.prefab
-  enter: {fileID: 7400000, guid: 983d80fee46b0dc429a5ea86ad714a71, type: 2}
-  leave: {fileID: 7400000, guid: 861691450bcf72346b827431c6803815, type: 2}
-========
   requestedPotion: 0
->>>>>>>> Developer:Assets/Prefabs/NPCPrefab.prefab
 --- !u!61 &4642433328205084952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,21 +149,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!111 &4900630334586376855
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8015995544444679221}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 983d80fee46b0dc429a5ea86ad714a71, type: 2}
-  - {fileID: 7400000, guid: 861691450bcf72346b827431c6803815, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0

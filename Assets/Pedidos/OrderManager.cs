@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 public class OrderManager : MonoBehaviour
 {
     public ConversationSO[] orders;
-
     public GameObject[] npcs;
     public LayerMask npcLayer;
 
@@ -48,6 +47,5 @@ public class OrderManager : MonoBehaviour
         _audioManager.PlaySound("PotionFailure");
         Destroy(instantiatedNPCs);
         _npcActive = false;
-
     }
 }

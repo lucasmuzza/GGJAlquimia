@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Fonts/GameFont.asset.meta
 guid: 57e8d2e8021ad2a4fb60af70da1a1500
+========
+guid: 483c227bd2998254a8f31f376c77c63c
+>>>>>>>> Developer:Assets/Scripts/IngredientSO/BicoDeGrifo.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Dialogos/New Ingredient.asset.meta
 guid: 137c821ea6024094e88775c0fe444eb5
+========
+guid: 7d84680a702ec374ca561e080c806b62
+>>>>>>>> Developer:Assets/Fonts/Biedermeir.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
