@@ -43,11 +43,6 @@ public class Cauldron : MonoBehaviour
         _ingredientsIconsContainer = _rootVisualElement.Q<VisualElement>("ingredientsIconsContainer");
     }
 
-    public void Update()
-    {
-        
-    }
-
     public void AddIngredient(IngredientSO ingredient)
     {
         Debug.Log($"The ingredient to add is {ingredient}");
@@ -86,48 +81,86 @@ public class Cauldron : MonoBehaviour
 
     public void CheckPotionReady()
     {
-        if(ingredientsToMix.Count < potionRecipe.ingredients.Count) return;
+        // If there aren't enough ingredients to match the recipe, exit early
+        if (ingredientsToMix.Count < potionRecipe.ingredients.Count) return;
 
-        // Check if all the ingredients match the potion's required ingredients.
-        else if (ingredientsToMix.Count == potionRecipe.ingredients.Count)
+        // Check if the mixed ingredients exactly match the recipe ingredients
+        bool isExactMatch = AreIngredientsExactMatch();
+
+        if (isExactMatch)
         {
-            bool allIngredientsMatch = true;
+            // Potion is successfully created
+            _potionReady = true;
+            Debug.Log("Potion is ready!");
 
-            foreach (IngredientSO ingredient in potionRecipe.ingredients)
-            {
-                if (!ingredientsToMix.Contains(ingredient))
-                {
-                    allIngredientsMatch = false;
+            _audioManager.PlaySound("PotionRight");
 
-                    Debug.Log("One of the ingredients didn't match. Failed to create the desired potion");
-                    ingredientsToMix.Clear();
-                    ClearIngredientsIcon();
-
-                    _audioManager.PlaySound("PotionFailed");
-
-                    OnPotionUnmatched?.Invoke(); // Event for telling the game that the potion didn't match the required potion
-                    break;
-                }
-            }
-
-            if (allIngredientsMatch)
-            {
-                _potionReady = true;
-                Debug.Log("Potion is ready!");
-
-                _audioManager.PlaySound("PotionRight");
-                _audioManager.PlaySound("PotionSucess");
-
-                StartCoroutine(WaitToClear(2));
-            }
+            // Handle potion success (e.g., score, clear ingredients/icons, etc.)
+            StartCoroutine(HandleSuccessfulPotion(2));
+        }
+        else
+        {
+            // Handle potion failure
+            Debug.Log("Potion failed: incorrect ingredients.");
+            HandleFailedPotion();
         }
     }
+
+    private bool AreIngredientsExactMatch()
+    {
+        // Create a copy of the recipe ingredients to check against
+        List<IngredientSO> recipeIngredients = new List<IngredientSO>(potionRecipe.ingredients);
+
+        // Iterate through the mixed ingredients
+        foreach (IngredientSO ingredient in ingredientsToMix)
+        {
+            if (recipeIngredients.Contains(ingredient))
+            {
+                // Remove the ingredient from the temporary list if it matches
+                recipeIngredients.Remove(ingredient);
+            }
+            else
+            {
+                // If an ingredient is not part of the recipe, it's an incorrect match
+                return false;
+            }
+        }
+
+        // If the temporary recipe list is empty, it's an exact match
+        return recipeIngredients.Count == 0;
+    }
+
+    private void HandleFailedPotion()
+    {
+        // Clear the ingredients list and icons
+        ingredientsToMix.Clear();
+        ClearIngredientsIcon();
+
+        // Fire the event to notify that the potion failed
+        OnPotionUnmatched?.Invoke();
+    }
+
+private IEnumerator HandleSuccessfulPotion(float waitTime)
+{
+    yield return new WaitForSeconds(waitTime);
+
+    // Clear ingredients and icons after the wait time
+    ClearIngredientsIcon();
+    ingredientsToMix.Clear();
+
+    // Add score based on the recipe rarity level
+    ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
+
+    // Reset potion ready flag
+    _potionReady = false;
+}
 
     private IEnumerator WaitToClear(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         ClearIngredientsIcon();
         ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
+        _potionReady = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
