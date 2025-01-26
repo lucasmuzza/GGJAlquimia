@@ -14,8 +14,8 @@ public class DialogueSystem : MonoBehaviour
 
     private ConversationSO _currentDialogue;
     public ConversationSO DialogueTest;
-    private int _indiceFalas;
-    private Queue<string> _filaFalas;
+    private int _indexSpeech;
+    private Queue<string> _wordsLine;
    
 
     void Awake()
@@ -29,31 +29,31 @@ public class DialogueSystem : MonoBehaviour
     }    
 
 
-    public void IniciarDialogo(ConversationSO conversa)
+    public void IniciarDialogo(ConversationSO conversation)
     {        
         //Faz aparecer a caixa de dialogo
         _DialogueBox.SetActive(true);
 
         //Inicializa a fila
-        _filaFalas = new Queue<string>();
+        _wordsLine = new Queue<string>();
 
-        _currentDialogue = conversa;
-        _indiceFalas = 0;
+        _currentDialogue = conversation;
+        _indexSpeech = 0;
 
-        ProximaFala();
+        NextWord();
     }
 
-    public void ProximaFala()
+    public void NextWord()
     {
-        if (wordPerWord.EstaMostrando)
+        if (wordPerWord.IsShowing)
         {
-            wordPerWord.MostrarTextoTodo();
+            wordPerWord.ShowAllText();
             return;
         }
 
-        if (_filaFalas.Count == 0)
+        if (_wordsLine.Count == 0)
         {
-            if (_indiceFalas < _currentDialogue.words.Length)
+            if (_indexSpeech < _currentDialogue.words.Length)
             {
                 //Coloca a imagem do personagem na caixa de diálogo e arruma o tamanho
                 //_avatarPersonagem.sprite = _currentDialogue.Falas[_indiceFalas].Personagem.Expressoes[_currentDialogue.Falas[_indiceFalas].IdDaExpressao];
@@ -63,12 +63,12 @@ public class DialogueSystem : MonoBehaviour
                 _nameCharacter.text = _currentDialogue.Name;
 
                 //Coloca todas as falas da expressão atual em uma fila
-                foreach (string textoFala in _currentDialogue.words[_indiceFalas].TextLines)
+                foreach (string textWord in _currentDialogue.words[_indexSpeech].TextLines)
                 {
-                    _filaFalas.Enqueue(textoFala);
+                    _wordsLine.Enqueue(textWord);
                 }
 
-                _indiceFalas++;
+                _indexSpeech++;
             }
             else
             {
@@ -78,7 +78,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        wordPerWord.MostrarTextoLetraPorLetra(_filaFalas.Dequeue());
+        wordPerWord.ShowTextLetterPerLetter(_wordsLine.Dequeue());
     }
 
 }

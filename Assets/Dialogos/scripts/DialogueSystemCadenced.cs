@@ -4,40 +4,40 @@ using TMPro;
 
 public class SistemaDialogoCadenciado : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _texto;
-    [SerializeField] private float _velocidadeDoTexto = 0.02f;
+    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private float _textVelocity = 0.02f;
 
-    public bool EstaMostrando { get; private set; }
+    public bool IsShowing { get; private set; }
 
     private IEnumerator _coroutineDoEfeito;
 
-    public void MostrarTextoLetraPorLetra(string textoDoDialogo)
+    public void ShowTextLetterPerLetter(string DialogueText)
     {
-        _texto.text = textoDoDialogo;
+        _text.text = DialogueText;
 
-        _coroutineDoEfeito = EfeitoLetraPorLetra();
+        _coroutineDoEfeito = LetterPerLetterEffect();
         StartCoroutine(_coroutineDoEfeito);
-        EstaMostrando = true;
+        IsShowing = true;
     }
 
-    public void MostrarTextoTodo()
+    public void ShowAllText()
     {
         StopCoroutine(_coroutineDoEfeito);
-        _texto.maxVisibleCharacters = _texto.text.Length;
+        _text.maxVisibleCharacters = _text.text.Length;
 
-        EstaMostrando = false;
+        IsShowing = false;
     }
 
-    private IEnumerator EfeitoLetraPorLetra()
+    private IEnumerator LetterPerLetterEffect()
     {
-        int caracteresTotais = _texto.text.Length;
-        _texto.maxVisibleCharacters = 0;
+        int caracteresTotais = _text.text.Length;
+        _text.maxVisibleCharacters = 0;
 
         for (int i = 0; i <= caracteresTotais; i++)
         {
-            _texto.maxVisibleCharacters = i;
-            yield return new WaitForSeconds(_velocidadeDoTexto);
+            _text.maxVisibleCharacters = i;
+            yield return new WaitForSeconds(_textVelocity);
         }
-        EstaMostrando = false;
+        IsShowing = false;
     }
 }
