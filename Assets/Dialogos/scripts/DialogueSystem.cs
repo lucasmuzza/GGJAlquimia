@@ -5,18 +5,19 @@ using System.Collections.Generic;
 
 public class DialogueSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject _caixaDeDialogo;
+
+    [SerializeField] private GameObject _DialogueBox;
 
     // [SerializeField] private Image _avatarPersonagem;
-    [SerializeField] private SistemaDialogoCadenciado falaPorFala;
-    [SerializeField] private TextMeshProUGUI _nomePersonagem;
-    [SerializeField] private TextMeshProUGUI _textoFala;
+    [SerializeField] private SistemaDialogoCadenciado wordPerWord;
+    [SerializeField] private TextMeshProUGUI _nameCharacter;
+    [SerializeField] private TextMeshProUGUI _textWord;
 
-    private ConversationSO _conversaAtual;
-    public ConversationSO ConversaTeste;
-    private int _indiceFalas;
-    private Queue<string> _filaFalas;
-   
+    private ConversationSO _currentDialogue;
+    public ConversationSO DialogueTest;
+    private int _indexSpeech;
+    private Queue<string> _wordsLine;
+
 
     void Awake()
     {
@@ -29,56 +30,61 @@ public class DialogueSystem : MonoBehaviour
     }    
 
 
-    public void IniciarDialogo(ConversationSO conversa)
+
+    public void IniciarDialogo(ConversationSO conversation)
     {        
         //Faz aparecer a caixa de dialogo
-        _caixaDeDialogo.SetActive(true);
+        _DialogueBox.SetActive(true);
 
         //Inicializa a fila
-        _filaFalas = new Queue<string>();
+        _wordsLine = new Queue<string>();
 
-        _conversaAtual = conversa;
-        _indiceFalas = 0;
+        _currentDialogue = conversation;
+        _indexSpeech = 0;
 
-        ProximaFala();
+        NextWord();
     }
 
-    public void ProximaFala()
+    public void NextWord()
     {
-        if (falaPorFala.EstaMostrando)
+        if (wordPerWord.IsShowing)
         {
-            falaPorFala.MostrarTextoTodo();
+            wordPerWord.ShowAllText();
             return;
         }
 
-        if (_filaFalas.Count == 0)
+        if (_wordsLine.Count == 0)
         {
-            if (_indiceFalas < _conversaAtual.words.Length)
+            if (_indexSpeech < _currentDialogue.words.Length)
             {
                 //Coloca a imagem do personagem na caixa de diálogo e arruma o tamanho
-                //_avatarPersonagem.sprite = _conversaAtual.Falas[_indiceFalas].Personagem.Expressoes[_conversaAtual.Falas[_indiceFalas].IdDaExpressao];
+                //_avatarPersonagem.sprite = _currentDialogue.Falas[_indiceFalas].Personagem.Expressoes[_currentDialogue.Falas[_indiceFalas].IdDaExpressao];
                 //_avatarPersonagem.SetNativeSize();
 
                 //Coloca o nome do personagem na caixa de diálogo
-                _nomePersonagem.text = _conversaAtual.Name;
+                _nameCharacter.text = _currentDialogue.Name;
 
                 //Coloca todas as falas da expressão atual em uma fila
-                foreach (string textoFala in _conversaAtual.words[_indiceFalas].TextLines)
+                foreach (string textWord in _currentDialogue.words[_indexSpeech].TextLines)
                 {
-                    _filaFalas.Enqueue(textoFala);
+                    _wordsLine.Enqueue(textWord);
                 }
 
-                _indiceFalas++;
+                _indexSpeech++;
+
             }
             else
             {
                 //Faz sumir a caixa de diálogo
-                _caixaDeDialogo.SetActive(false);
+
+                _DialogueBox.SetActive(false);
+
                 return;
             }
         }
 
-        falaPorFala.MostrarTextoLetraPorLetra(_filaFalas.Dequeue());
+
+        wordPerWord.ShowTextLetterPerLetter(_wordsLine.Dequeue());
     }
 
 }

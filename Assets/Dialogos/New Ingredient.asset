@@ -21,4 +21,4 @@ MonoBehaviour:
   ingredientRarity: 0
   ingredientPrefab: {fileID: 0}
   ingredientMaterial: {fileID: 0}
-  ingredientIcon: {fileID: -953898427, guid: 747369a50eb97af4db05183ef76ac96c, type: 3}
+  ingredientIcon: {fileID: 1614374892023023259, guid: 10d3643d91dae7546a095373b156d2c4, type: 3}
