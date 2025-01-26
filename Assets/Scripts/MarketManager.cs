@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class MarketManager : MonoBehaviour
@@ -10,9 +11,12 @@ public class MarketManager : MonoBehaviour
     MerchantOffers choosenOffer;
 
     [SerializeField] IngredientStock stockManager;
-    [SerializeField] ScoreManager ScoreManager;
+    [SerializeField] ScoreManager scoreManager;
 
     [SerializeField] private float refreshPrice;
+
+    [SerializeField] private KeyCode openMarket;
+    [SerializeField] private KeyCode closeMarket;
 
     void Start()
     {
@@ -20,7 +24,7 @@ public class MarketManager : MonoBehaviour
         for( int i = 0 ; i < market.transform.childCount; i++)
         {
             market.transform.GetChild(i).GetChild(3).GetComponent<BuyStock>().stockManager = stockManager;
-            market.transform.GetChild(i).GetChild(3).GetComponent<BuyStock>().scoreManager = ScoreManager;
+            market.transform.GetChild(i).GetChild(3).GetComponent<BuyStock>().scoreManager = scoreManager;
         }
     }
 
@@ -31,12 +35,26 @@ public class MarketManager : MonoBehaviour
 
     public void RefreshMarket()
     {
-        if(ScoreManager.score > refreshPrice)
+        if(scoreManager.score > refreshPrice)
         {
             RandomizeMarket();
         }
     }
 
+    void Update(){
+        if(Input.GetKeyDown(openMarket))
+        {
+            market.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else if(Input.GetKeyDown(closeMarket))
+        {
+            market.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
+    }
 
     private void RandomizeMarket()
     {
