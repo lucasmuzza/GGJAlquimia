@@ -24,7 +24,7 @@ public class RebindingDisplay : MonoBehaviour
     private List<InputActionReference> tempDefaultBinds;
     private const string RebindsKey = "rebinds";
 
-    // Update the event to pass both old and new bind text
+
     public UnityEvent<string, string> OnBindUpdate = new UnityEvent<string, string>();
 
     private void Start()
@@ -61,8 +61,6 @@ public class RebindingDisplay : MonoBehaviour
             };
 
             inputKeyBinds.Add(newKeyBind);
-
-            Debug.Log($"Initialized default bind: Action '{newKeyBind.inputAction.name}', Key '{newKeyBind.bindingDisplayName}'");
         }
     }
 
@@ -82,8 +80,6 @@ public class RebindingDisplay : MonoBehaviour
             };
 
             inputKeyBinds.Add(newKeyBind);
-
-            Debug.Log($"Loaded rebind: Action '{newKeyBind.inputAction.name}', Key '{newKeyBind.bindingDisplayName}'");
         }
     }
 
@@ -138,7 +134,7 @@ public class RebindingDisplay : MonoBehaviour
         }
 
         // Update the Label text directly
-        currentBind.text = rebindedText.ToUpper();
+        currentBind.text = rebindedText.ToLower();
 
         OnBindUpdate?.Invoke(oldBindText, rebindedText);
 
@@ -154,15 +150,7 @@ public class RebindingDisplay : MonoBehaviour
 
     public void ResetBinds()
     {
-        // Ensure that tempDefaultBinds contains the expected default bindings
         tempDefaultBinds = new List<InputActionReference>(defaultKeyBinds);
-
-        // Log current bindings before resetting for debugging purposes
-        Debug.Log("Current inputKeyBinds before reset:");
-        foreach (var keyBind in inputKeyBinds)
-        {
-            Debug.Log($"{keyBind.inputAction.name}: {keyBind.bindingDisplayName}");
-        }
 
         // Clear all current binding overrides from player input
         playerInput.actions.RemoveAllBindingOverrides();
@@ -182,16 +170,11 @@ public class RebindingDisplay : MonoBehaviour
                 InputControlPath.HumanReadableStringOptions.OmitDevice
             );
 
-            // Log old and new bindings for debugging purposes
-            Debug.Log($"Old bind: {oldBindText}, New bind: {newBindText}");
-
             // Update the binding display name with the new (default) binding text
             inputKeyBinds[i].bindingDisplayName = newBindText;
 
-            // Manually update the UI elements (e.g., Labels) connected to these bindings
             if (optionsMenu._bindTextDic.ContainsKey(i))
             {
-                // Update the corresponding UI Label text
                 optionsMenu._bindTextDic[i].text = newBindText.ToUpper();
             }
 

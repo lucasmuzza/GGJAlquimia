@@ -7,108 +7,47 @@ using UnityEngine.UIElements;
 public class OrderManager : MonoBehaviour
 {
     public ConversationSO[] orders;
-    [SerializeField] private GameObject[] npcs;
 
-    [Header(" ")]
-    [SerializeField] private GameObject merchant;
-    [SerializeField] private merchantOffers[] merchantOffers;
-    [SerializeField] private int turnsToAppear;
-    [SerializeField] private int merchantTotalTurns;
+    public GameObject[] npcs;
+    public LayerMask npcLayer;
 
-    
-    [Header(" ")]
-    [SerializeField] private KeyCode nextNpc;
-    [SerializeField] private KeyCode givePotion;
 
-    [Header(" ")]
-    [SerializeField] LayerMask npcLayer;
-    [SerializeField] Transform instantiateLocation;
-    
-    private GameObject instantiatedNPC;
-    private GameObject instantiatedMerchant;
+    public Transform spawnLocation;
+    private GameObject instantiatedNPCs;
 
-    
-    
-    DialogueSystem dialogueSystem;
+    private AudioManager _audioManager;
+    private DialogueSystem _dialogueSystem;
 
-    bool canSpawnNPC = true;
-    bool canDeleteNPC = false;
+    private bool _npcActive = false;
     
     void Start()
     {
-        merchantTotalTurns = turnsToAppear;
-        dialogueSystem = GameObject.FindWithTag("dialogueSystem").GetComponent<DialogueSystem>();
-    }
+        _dialogueSystem = FindFirstObjectByType<DialogueSystem>();
 
-   
-  
+        _audioManager = AudioManager.instance;
 
-    void Update()
-    {
-        if(Input.GetKeyDown(nextNpc) && canSpawnNPC)
+        if(!_npcActive)
         {
-            canDeleteNPC = false;
-            CreateNPC();
-        }
-        if(Input.GetKeyDown(givePotion) && !canSpawnNPC && canDeleteNPC)
-        {
-            PotionGive();
-            canSpawnNPC = true;
-        }
-        if(Input.GetMouseButton(0))
-        {
-            ShootRay();
-        }
-    }
-    public void PotionGive()
-    {
-        if(instantiatedNPC != null)
-        instantiatedNPC.GetComponent<NPC>().NPCLeave();
-        else if(instantiatedMerchant!= null)
-        instantiatedMerchant.GetComponent<MerchantScript>().NPCLeave();
-    }
-    void CreateNPC()
-    {
-        canSpawnNPC = false;
-        if(turnsToAppear > 0)
-        {
-            instantiatedNPC = Instantiate(npcs[Random.Range(0, npcs.Length)]);
-            //Cria um pedido aleatoria dentro do Array
-            instantiatedNPC.GetComponent<NPC>().conversationSO = orders[Random.Range(0, orders.Length)];
-            Invoke("NPCActive", 2f);
-            turnsToAppear--;
-        }
-        else
-        {
-            instantiatedMerchant = Instantiate(merchant);
-            instantiatedMerchant.GetComponent<MerchantScript>().offer = merchantOffers[Random.Range(0 , merchantOffers.Length)]; 
-            turnsToAppear = merchantTotalTurns;
-            Invoke("NPCActive", 2f);
+            instantiatedNPCs = Instantiate(npcs[Random.Range(0, npcs.Length)],spawnLocation.position, Quaternion.identity);
+
+            // Passes a random order from the orders array
+            instantiatedNPCs.GetComponent<NPC>().conversationSO = orders[Random.Range(0, orders.Length)]; 
+            _npcActive = true;
         }
     }
 
-    void NPCActive()
+    public void OnPotionSucess()
     {
-        canDeleteNPC = true;
+        _audioManager.PlaySound("PotionSucess");
+        Destroy(instantiatedNPCs);
+        _npcActive = false;
     }
-    void ShootRay()
+
+    public void OnPotionFailed()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _audioManager.PlaySound("PotionFailure");
+        Destroy(instantiatedNPCs);
+        _npcActive = false;
 
-        // Lança o raio na posição do mouse
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, npcLayer);
-
-        if (hit.collider != null)
-        {
-            
-            if (hit.collider.CompareTag("npc"))
-            {
-                dialogueSystem.IniciarDialogo(hit.collider.gameObject.GetComponent<NPC>().conversationSO);
-            }
-            // if(hit.collider.CompareTag("merchant"))
-            // {
-            //     dialogueSystem.IniciarDialogo(hit.collider.gameObject.GetComponent<MerchantScript>().conversationSO);
-            // }
-        }
     }
 }

@@ -4,36 +4,11 @@ public class NPC : MonoBehaviour
 {
     public ConversationSO conversationSO;
 
-    [SerializeField]
-    private AnimationClip enter;
-    [SerializeField]
-    private AnimationClip leave; 
-    Animation Animation;
-    float animationLenght = 2.2f;
+    public Potion requestedPotion;
 
-    GameObject market;
-
-
-    public void Start()
+    private void Start()
     {
-        Animation = GetComponent<Animation>();
+        requestedPotion = conversationSO.requestedPotion;
 
-        
-        Animation.clip = enter;
-        Animation.Play();
-        Invoke("OpenMarket", 2f);
-    }
-
-    public void NPCLeave()
-    {
-        Animation.clip = leave; 
-        Animation.Play();
-        Destroy(gameObject, animationLenght);
-    }
-
-    void OpenMarket()
-    {
-        market.SetActive(true);
-        
     }
 }

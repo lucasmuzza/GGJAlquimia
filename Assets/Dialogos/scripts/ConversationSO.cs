@@ -5,7 +5,7 @@ using UnityEngine;
 public class ConversationSO : ScriptableObject
 {
     public ConversationLines[] words;
-    public String Name;
+    public string Name;
     public Potion requestedPotion;
 }
 

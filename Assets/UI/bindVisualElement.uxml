@@ -1,7 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement name="bindVisualElement" style="flex-grow: 0; align-items: center; justify-content: center; align-self: stretch; white-space: normal; -unity-text-align: upper-left; flex-wrap: nowrap; flex-direction: row-reverse;">
-        <engine:Button text="Button" name="configBindButton" style="align-items: flex-end; flex-grow: 1; flex-shrink: 1;" />
-        <engine:Label text="Label" name="currentBind" style="flex-grow: 1; align-items: stretch; align-self: center; justify-content: center; -unity-text-align: middle-center; color: rgb(255, 255, 255); flex-shrink: 1;" />
-        <engine:Label text="Label" name="bindTitle" style="flex-grow: 1; flex-shrink: 1; align-self: center; justify-content: center; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+    <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
+    <engine:VisualElement name="bindVisualElement" style="flex-grow: 0; align-items: center; justify-content: center; align-self: center; white-space: normal; -unity-text-align: upper-left; flex-wrap: nowrap; flex-direction: row-reverse; width: 600px;">
+        <engine:Button text="Button" name="configBindButton" class="UIButtons" style="align-items: flex-end; flex-grow: 0; flex-shrink: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 200px; font-size: 30px;" />
+        <engine:Label text="Label" name="currentBind" style="flex-grow: 1; align-items: stretch; align-self: center; justify-content: center; -unity-text-align: middle-center; color: rgb(255, 255, 255); flex-shrink: 1; width: 150px; font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
+        <engine:Label text="Label" name="bindTitle" style="flex-grow: 1; flex-shrink: 1; align-self: center; justify-content: center; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 30px;" />
     </engine:VisualElement>
 </engine:UXML>

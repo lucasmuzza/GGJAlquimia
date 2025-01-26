@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793841ba856414b49b982db48844e3e1, type: 3}
+  m_Name: "Po\xE7\xE3oDaEleva\xE7\xE3oPrimordial"
+  m_EditorClassIdentifier: 
+  recipeName: "Po\xE7\xE3o da Eleva\xE7\xE3o Primordial"
+  recipeRarityLevel: 3
+  potionType: 7
+  ingredients:
+  - {fileID: 11400000, guid: ed703040666c1de45874a7362bcc8d89, type: 2}
+  - {fileID: 11400000, guid: 9428a01c9ba240747840161da02d98dc, type: 2}
+  - {fileID: 11400000, guid: 0638b7ac98098c74bb595c36ca39db78, type: 2}
+  - {fileID: 11400000, guid: c2ca66187034b5046a0a15ba01f82b3f, type: 2}
+  - {fileID: 11400000, guid: 78f7cc2a04cdcec4cadc39434de3cafd, type: 2}

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class DialogueSystem : MonoBehaviour
 {
+
     [SerializeField] private GameObject _DialogueBox;
 
     // [SerializeField] private Image _avatarPersonagem;
@@ -16,7 +17,7 @@ public class DialogueSystem : MonoBehaviour
     public ConversationSO DialogueTest;
     private int _indexSpeech;
     private Queue<string> _wordsLine;
-   
+
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class DialogueSystem : MonoBehaviour
         Cursor.visible = true;
         // player.GetComponent<PlayerMovementAdvanced>().enabled = false;
     }    
+
 
 
     public void IniciarDialogo(ConversationSO conversation)
@@ -69,14 +71,18 @@ public class DialogueSystem : MonoBehaviour
                 }
 
                 _indexSpeech++;
+
             }
             else
             {
                 //Faz sumir a caixa de diálogo
+
                 _DialogueBox.SetActive(false);
+
                 return;
             }
         }
+
 
         wordPerWord.ShowTextLetterPerLetter(_wordsLine.Dequeue());
     }

@@ -1,19 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Lucas/Scripts/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
+    <engine:Template name="tabs" src="project://database/Assets/UI/tabs.uxml?fileID=9197481963319205126&amp;guid=1153d60edb31abb47a08e158eea0f67f&amp;type=3#tabs" />
+    <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
-        <engine:TabView tabindex="0" name="tabs" style="align-self: center; justify-content: center; max-width: none; align-items: flex-start;">
-            <engine:Tab label="Tab" name="bindsConfigTab" closeable="false" style="width: 800px; height: 800px; justify-content: center; align-items: flex-end; align-self: center; position: relative;">
-                <engine:VisualElement name="bindsContainer" style="flex-grow: 1; width: 800px; height: 800px; background-color: rgb(48, 49, 55); justify-content: space-evenly; align-self: center;">
-                    <engine:Button text="Save Binds" name="saveButton" style="flex-direction: column-reverse;" />
-                    <engine:Button text="Reset All Binds" name="resetButton" style="flex-direction: column-reverse;" />
-                </engine:VisualElement>
-            </engine:Tab>
-            <engine:Tab label="Tab" name="videoConfigTab">
-                <engine:VisualElement name="videoContainer" style="flex-grow: 1; width: 800px; height: 800px; background-color: rgb(48, 49, 55); justify-content: space-evenly; align-self: center;" />
-            </engine:Tab>
-            <engine:Tab label="Tab" name="audioConfigTab">
-                <engine:VisualElement name="audioContainer" style="flex-grow: 1; width: 800px; height: 800px; background-color: rgb(48, 49, 55); justify-content: space-evenly; align-self: center;" />
-            </engine:Tab>
-        </engine:TabView>
+        <engine:Instance template="tabs" name="tabs" />
+        <engine:Button text="Main Menu" name="mainMenuButton" class="UIButtons" style="position: absolute; left: 605px; top: 20px; width: 140px; font-size: 20px;" />
     </engine:VisualElement>
 </engine:UXML>

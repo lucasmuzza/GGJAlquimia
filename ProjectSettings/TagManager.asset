@@ -7,8 +7,8 @@ TagManager:
   - npc
   - dialogueSystem
   - Cauldron
-  - merchant
-  - Market
+  - Bubble
+
   layers:
   - Default
   - TransparentFX
@@ -16,7 +16,7 @@ TagManager:
   - NPC
   - Water
   - UI
-  - 
+  - Bubble
   - 
   - 
   - 
