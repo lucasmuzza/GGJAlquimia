@@ -159,6 +159,8 @@ MonoBehaviour:
   - ClientView
   isGamePaused: 0
   optionsMenu: {fileID: 8859984}
+  orderSucessAmount: 0
+  orderFailedAmount: 0
   playerInputHandler: {fileID: 0}
 --- !u!114 &8859984
 MonoBehaviour:
@@ -174,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenuUIDoc: {fileID: 8859986}
   bindTemplate: {fileID: 9197481963319205126, guid: 0d1610888208e5b419c9a4261209e362, type: 3}
+  menuConfig: {fileID: 0}
 --- !u!4 &8859985
 Transform:
   m_ObjectHideFlags: 0
@@ -204,7 +207,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 1627bd4e627ce564e814506e3bf4dfa1, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 0d0b7bf3299b46d4b9e55f02ec808866, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -716,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSetups:
-  - audioClip: {fileID: 8300000, guid: bd2e07022454c594987889703efabfdf, type: 3}
+  - audioClip: {fileID: 8300000, guid: de869ca2327744149b786920e9ca1d75, type: 3}
     audioTypeName: Button
   - audioClip: {fileID: 8300000, guid: bc9e5a52dd297694fa82c5087b93b1ca, type: 3}
     audioTypeName: Bubble
@@ -1237,6 +1240,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1929121496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1929121498}
+  - component: {fileID: 1929121497}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1929121497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929121496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99a9c6e4e5ae7243ae51ebed25976d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimerStopped:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1929121498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929121496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024115924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,3 +1439,4 @@ SceneRoots:
   - {fileID: 1907593258}
   - {fileID: 1757536505}
   - {fileID: 1179338065}
+  - {fileID: 1929121498}
