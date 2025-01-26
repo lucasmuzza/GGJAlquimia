@@ -1,8 +1,25 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:Template name="tabs" src="project://database/Assets/UI/tabs.uxml?fileID=9197481963319205126&amp;guid=1153d60edb31abb47a08e158eea0f67f&amp;type=3#tabs" />
     <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
-        <engine:Instance template="tabs" name="tabs" />
-        <engine:Button text="Main Menu" name="mainMenuButton" class="UIButtons" style="position: absolute; left: 605px; top: 20px; width: 140px; font-size: 20px;" />
+        <engine:VisualElement name="tabs" template="tabs" style="width: 1920px; height: 1080px;">
+            <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
+            <engine:VisualElement name="tabs" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20com%20contoro.png?fileID=2800000&amp;guid=e1cd2e391ab51c04c9c3b8dde99cace9&amp;type=3#Pagina com contoro&quot;); width: 800px; height: 1000px; align-items: center; align-self: center;">
+                <engine:TabView tabindex="0" name="tabs" data-source="project://database/Assets/UI/New%20Options%20Menu%20Config.asset?fileID=11400000&amp;guid=fe00ee107cf792e44808195b1bb7274e&amp;type=2#New Options Menu Config" data-source-path="tabChangeSoundName" style="align-self: center; justify-content: center; max-width: none; align-items: center; position: relative; flex-direction: column; flex-wrap: wrap-reverse; overflow: visible; height: 1080px; width: 1920px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); -unity-text-align: middle-center; font-size: 14px;">
+                    <engine:Tab name="bindsConfigTab" closeable="false" icon-image="project://database/Assets/Sprites/1x/gamepad.png?fileID=2800000&amp;guid=e5708afd7294d57408b23d93731a8029&amp;type=3#gamepad" label="Teclas" style="width: 800px; height: 1000px; justify-content: center; align-items: flex-end; align-self: center; position: relative; opacity: 1; font-size: 0; -unity-text-align: middle-center; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);">
+                        <engine:VisualElement name="bindsContainer" style="flex-grow: 1; width: 800px; height: 1000px; background-color: rgba(255, 255, 255, 0); justify-content: space-evenly; align-self: center; background-image: none; -unity-background-image-tint-color: rgb(255, 255, 255); align-items: stretch; overflow: visible; font-size: 14px; -unity-font-style: normal; -unity-font-definition: url(&quot;project://database/Assets/Fonts/AquilineTwo.ttf?fileID=12800000&amp;guid=b7778b8a3555ea34894b9b7f58333e02&amp;type=3#AquilineTwo&quot;);">
+                            <engine:Button text="Salvar Teclas" name="saveButton" class="UIButtons" style="width: 600px;" />
+                            <engine:Button text="Resetar Teclas" name="resetButton" class="UIButtons" style="flex-direction: column-reverse; width: 600px; justify-content: center; align-self: center; margin-top: 30px; margin-right: 0; margin-bottom: 30px; margin-left: 0; font-size: 40px; white-space: normal; background-color: rgb(87, 82, 72); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; word-spacing: 20px;" />
+                        </engine:VisualElement>
+                    </engine:Tab>
+                    <engine:Tab name="videoConfigTab" icon-image="project://database/Assets/Sprites/1x/gear.png?fileID=2800000&amp;guid=4f85acd90792f1942852653838a2b006&amp;type=3#gear" label=" Video">
+                        <engine:VisualElement name="videoContainer" style="flex-grow: 1; width: 800px; height: 1000px; background-color: rgba(48, 49, 55, 0); justify-content: space-evenly; align-self: center; background-image: none;" />
+                    </engine:Tab>
+                    <engine:Tab name="audioConfigTab" icon-image="project://database/Assets/Sprites/1x/audioOn.png?fileID=2800000&amp;guid=9d2b92071f80fef459490c6dc342b528&amp;type=3#audioOn" label=" Audio">
+                        <engine:VisualElement name="audioContainer" style="flex-grow: 1; width: 800px; height: 1000px; background-color: rgba(48, 49, 55, 0); justify-content: space-evenly; align-self: center; background-image: none;" />
+                    </engine:Tab>
+                </engine:TabView>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:Button text="Menu Principal" name="mainMenuButton" class="UIButtons" style="position: absolute; left: 605px; top: 20px; width: 140px; font-size: 21px;" />
     </engine:VisualElement>
 </engine:UXML>

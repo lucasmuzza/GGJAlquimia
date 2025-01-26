@@ -11,7 +11,13 @@ public class GameManager : MonoBehaviour
     public bool isGamePaused;
     public OptionsMenu optionsMenu;
 
+    public int orderSucessAmount;
+    public int orderFailedAmount;
+
     public PlayerInputHandler playerInputHandler;
+
+
+    private Timer timer;
 
     private void Awake()
     {
@@ -37,6 +43,23 @@ public class GameManager : MonoBehaviour
 
         playerInputHandler.onGamePaused.AddListener(ToggleOptionsMenu);
         playerInputHandler.onChangedSceneView.AddListener(ChangeCameraView);
+
+        timer = FindFirstObjectByType<Timer>();
+    }
+
+    private void Update()
+    {
+        if(orderSucessAmount >= 3)
+        {
+            // Incentive for getting at least 3 in a row
+            orderFailedAmount = 0;
+        }
+
+        if(orderFailedAmount >= 5)
+        {
+            // Lose the game
+            timer.StopTimer();
+        }
     }
 
     private void ToggleOptionsMenu(bool hasPaused)

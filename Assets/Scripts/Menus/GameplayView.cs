@@ -7,8 +7,7 @@ public class GameplayView : MonoBehaviour
 
     public UIDocument gameplayUIDoc;
     private VisualElement _rootVisualElement;
-    private Label _moneyLabel;
-    
+    private Label _moneyLabel;    
     private void Start()
     {
         scoreManagerInstance = ScoreManager.instance;
@@ -21,7 +20,17 @@ public class GameplayView : MonoBehaviour
 
     private void Update()
     {
+
+        if(GameManager.instance.isGamePaused)
+        {
+            _rootVisualElement.pickingMode = PickingMode.Ignore;
+        }
+        else if(!GameManager.instance.isGamePaused)
+        {
+            _rootVisualElement.pickingMode = PickingMode.Position;
+        }
+
         _moneyLabel = _rootVisualElement.Q<Label>("moneyLabel");
-        _moneyLabel.text = $"Money: {scoreManagerInstance.GetScore()}";
+        _moneyLabel.text = $"Moedas: {scoreManagerInstance.GetScore()}";
     }
 }

@@ -23,24 +23,30 @@ public class OptionsMenu : MonoBehaviour
     
     private RebindingDisplay _rebindingDisplay;
     private List<InputActionReference> _defaultActions = new List<InputActionReference>();
-    public Dictionary<int,Label> _bindTextDic = new Dictionary<int, Label>();
+    public Dictionary<int, Label> _bindTextDic = new Dictionary<int, Label>();
+
+    public OptionsMenuConfig menuConfig; // ScriptableObject for configuration
 
     void Start()
     {
+        // Initialize the UI Document and root element
         optionsMenuUIDoc = GetComponent<UIDocument>();
-
         rootVisualElement = optionsMenuUIDoc.rootVisualElement;
         rootVisualElement.style.display = DisplayStyle.None;
 
+        // Set up the TabView
         _tabView = rootVisualElement.Q<TabView>("tabs");
-        
+        _tabView.RegisterCallback<ChangeEvent<string>>(evt => PlayTabChangeSound(menuConfig?.tabChangeSoundName));
+
         _bindsContainer = _tabView.Q<VisualElement>("bindsContainer");
 
+        // Initialize RebindingDisplay
         _rebindingDisplay = GetComponent<RebindingDisplay>();
         _rebindingDisplay.OnBindUpdate.AddListener(UpdatingRebind);
 
         _defaultActions = _rebindingDisplay.GetDefaultBinds();
 
+        // Set up buttons
         _mainMenuButton = rootVisualElement.Q<Button>("mainMenuButton");
         _mainMenuButton.clicked += LoadMainMenu;
 
@@ -59,23 +65,25 @@ public class OptionsMenu : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 rootVisualElement.style.display = DisplayStyle.None;
             }
         }
     }
 
-
-    //TODO: Change the sound to the button sound
+    // Load the Main Menu scene
     private void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
 
-        _audioManager.PlaySound("Button");
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button");
+        }
     }
 
-    #region  Rebinding Tab Functions
+    #region Rebinding Tab Functions
     private void DisplayDefaultBinds()
     {
         for (int i = 0; i < _defaultActions.Count; i++)
@@ -92,10 +100,10 @@ public class OptionsMenu : MonoBehaviour
             _currentBind.text = $"{InputControlPath.ToHumanReadableString(effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice)}";
             _currentBind.AddToClassList("currentBind");
 
-            _bindTextDic.Add(i,_currentBind);
+            _bindTextDic.Add(i, _currentBind);
 
             _changeBindButton = bindTemplateVisualElement.Q<Button>("configBindButton");
-            _changeBindButton.text = "Change Bind";
+            _changeBindButton.text = "Trocar Tecla";
             
             // Pass the specific InputActionReference to the Rebind method
             var actionReference = GetActionReferenceByPath(effectivePath);
@@ -126,10 +134,12 @@ public class OptionsMenu : MonoBehaviour
 
     private void Rebind(InputActionReference actionReference, Label currentBind)
     {
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button");
+        }
 
-       _audioManager.PlaySound("Button");
-
-        currentBind.text = "Waiting for Input....";
+        currentBind.text = "Esperando por Input....";
 
         if (actionReference != null)
         {
@@ -147,7 +157,6 @@ public class OptionsMenu : MonoBehaviour
     {
         foreach (var entry in _bindTextDic)
         {
-            // Find the label associated with the previously bound key
             if (entry.Value.text == oldBindText)
             {
                 entry.Value.text = newBindText;
@@ -163,15 +172,33 @@ public class OptionsMenu : MonoBehaviour
     {
         _rebindingDisplay.Save();
 
-       _audioManager.PlaySound("Button");
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button");
+        }
     }
 
     private void ResetBinds()
     {
         _rebindingDisplay.ResetBinds();
 
-        _audioManager.PlaySound("Button");
-
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button");
+        }
     }
     #endregion
+
+    // Play sound when switching tabs
+    private void PlayTabChangeSound(string soundName)
+    {
+        if (_audioManager != null && !string.IsNullOrEmpty(soundName))
+        {
+            _audioManager.PlaySound(soundName);
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager or sound name is missing.");
+        }
+    }
 }

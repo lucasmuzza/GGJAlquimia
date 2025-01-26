@@ -2,9 +2,9 @@
     <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
         <engine:VisualElement name="bookBackground" style="flex-grow: 1; justify-content: center; align-self: center; width: 600px;">
-            <engine:Button text="play" name="PlayButton" class="UIButtons" />
-            <engine:Button text="options" name="OptionsButton" class="UIButtons" />
-            <engine:Button text="quit" name="QuitButton" class="UIButtons" />
+            <engine:Button text="Jogar" name="PlayButton" class="UIButtons" />
+            <engine:Button text="Opções" name="OptionsButton" class="UIButtons" />
+            <engine:Button text="Sair" name="QuitButton" class="UIButtons" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
