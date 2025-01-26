@@ -1,14 +1,28 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class BuyStock : MonoBehaviour
 {
     public IngredientSO ingredientSO;
-    [SerializeField] IngredientStock stockManager;
+    public IngredientStock stockManager;
+
+    public ScoreManager scoreManager;
+    public float ingredientPrice;
 
     public void OnButtonClick()
     {
-      stockManager.AddIngredientToStock(ingredientSO); 
+      if(scoreManager.score < ingredientPrice)
+      {
+        
+      }
+      else
+      {
+          scoreManager.score = scoreManager.score-ingredientPrice;
+          stockManager.AddIngredientToStock(ingredientSO);
+      }
+
+       
     }
 
 }

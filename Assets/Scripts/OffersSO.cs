@@ -1,10 +1,9 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Offer", menuName = "merchant/offer")]
-public class merchantOffers : ScriptableObject
+public class MerchantOffers : ScriptableObject
 {
     public Offers[] offers;
-
 }
 [System.Serializable]
 public class Offers

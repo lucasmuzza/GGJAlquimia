@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MerchantScript : MonoBehaviour
 {
-    public merchantOffers offer;
+    public MerchantOffers offer;
     public ConversationSO conversationSO;
     [Header(" ")]
     [SerializeField] private AnimationClip enter;
@@ -34,16 +34,7 @@ public class MerchantScript : MonoBehaviour
     }
 
     
-    private void StarMarket()
-    {
-        market.SetActive(true);
-        
-        for( int i = 0 ; i < market.transform.childCount; i++)
-        {
+   
 
-            market.transform.GetChild(i).GetChild(1).GetComponent<TextMeshProUGUI>().text = offer.offers[i].ingredient.ingredientName;
-            market.transform.GetChild(i).GetChild(2).GetComponent<TextMeshProUGUI>().text = offer.offers[i].ingredient.ingredientDescription;
-            market.transform.GetChild(i).GetChild(3).GetComponent<BuyStock>().ingredientSO = offer.offers[i].ingredient;
-        }
-    }
+   
 }
