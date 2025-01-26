@@ -72,7 +72,7 @@ public class OptionsMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
 
-        _audioManager.PlaySound("Test");
+        _audioManager.PlaySound("Button");
     }
 
     #region  Rebinding Tab Functions
@@ -127,7 +127,7 @@ public class OptionsMenu : MonoBehaviour
     private void Rebind(InputActionReference actionReference, Label currentBind)
     {
 
-       _audioManager.PlaySound("Test");
+       _audioManager.PlaySound("Button");
 
         currentBind.text = "Waiting for Input....";
 
@@ -163,14 +163,14 @@ public class OptionsMenu : MonoBehaviour
     {
         _rebindingDisplay.Save();
 
-       _audioManager.PlaySound("Test");
+       _audioManager.PlaySound("Button");
     }
 
     private void ResetBinds()
     {
         _rebindingDisplay.ResetBinds();
 
-        _audioManager.PlaySound("Test");
+        _audioManager.PlaySound("Button");
 
     }
     #endregion

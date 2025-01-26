@@ -16,6 +16,11 @@ public class GameplayView : MonoBehaviour
         gameplayUIDoc = GetComponent<UIDocument>();
 
         _rootVisualElement = gameplayUIDoc.rootVisualElement;
+        
+    }
+
+    private void Update()
+    {
         _moneyLabel = _rootVisualElement.Q<Label>("moneyLabel");
         _moneyLabel.text = $"Money: {scoreManagerInstance.GetScore()}";
     }

@@ -37,12 +37,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
 
-        _audioManager.PlaySound("Test");
+        _audioManager.PlaySound("Button");
     }
 
     private void OpenOption()
     {
-        _audioManager.PlaySound("Test");
+        _audioManager.PlaySound("Button");
         optionsMenu.rootVisualElement.style.display = DisplayStyle.Flex;
 
 
@@ -52,7 +52,7 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
 
-        _audioManager.PlaySound("Test");
+        _audioManager.PlaySound("Button");
 
     }
 }

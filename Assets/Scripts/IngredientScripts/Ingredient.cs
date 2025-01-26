@@ -15,15 +15,4 @@ public class Ingredient : MonoBehaviour
 
         _audioManager = AudioManager.instance;
     }
-    
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.gameObject.CompareTag("Cauldron"))
-        {
-            _audioManager.PlaySound("CauldronDrop");
-            other.gameObject.GetComponent<Cauldron>().AddIngredient(ingredient);
-            Destroy(gameObject);
-        }
-        
-    }
 }

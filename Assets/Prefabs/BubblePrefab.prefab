@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubbleManagerInstance: {fileID: 0}
   bubbleIngrendient: {fileID: 0}
-  boxCollider: {fileID: 0}
+  boxCollider: {fileID: 1582278840418368879}
 --- !u!61 &1582278840418368879
 BoxCollider2D:
   m_ObjectHideFlags: 0

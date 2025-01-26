@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -49,6 +50,8 @@ public class Cauldron : MonoBehaviour
 
     public void AddIngredient(IngredientSO ingredient)
     {
+        Debug.Log($"The ingredient to add is {ingredient}");
+
         ingredientsToMix.Add(ingredient);
         AddIngredientsIcon(ingredient);
 
@@ -61,7 +64,7 @@ public class Cauldron : MonoBehaviour
         var ingredientIcon = ingredientIconTemplate.Instantiate();
 
         // Query the ingredientIcon from the template
-        VisualElement icon = ingredientIcon.Q<VisualElement>("ingredientIcon");
+        VisualElement icon = ingredientIcon.Q<VisualElement>("Image");
 
         if (icon != null)
         {
@@ -86,7 +89,7 @@ public class Cauldron : MonoBehaviour
         if(ingredientsToMix.Count < potionRecipe.ingredients.Count) return;
 
         // Check if all the ingredients match the potion's required ingredients.
-        else if (ingredientsToMix.Count >= potionRecipe.ingredients.Count)
+        else if (ingredientsToMix.Count == potionRecipe.ingredients.Count)
         {
             bool allIngredientsMatch = true;
 
@@ -100,6 +103,8 @@ public class Cauldron : MonoBehaviour
                     ingredientsToMix.Clear();
                     ClearIngredientsIcon();
 
+                    _audioManager.PlaySound("PotionFailed");
+
                     OnPotionUnmatched?.Invoke(); // Event for telling the game that the potion didn't match the required potion
                     break;
                 }
@@ -109,8 +114,31 @@ public class Cauldron : MonoBehaviour
             {
                 _potionReady = true;
                 Debug.Log("Potion is ready!");
-                OnPotionMatched?.Invoke(potionRecipe.recipeRarityLevel);
+
+                _audioManager.PlaySound("PotionRight");
+                _audioManager.PlaySound("PotionSucess");
+
+                StartCoroutine(WaitToClear(2));
             }
         }
+    }
+
+    private IEnumerator WaitToClear(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        ClearIngredientsIcon();
+        ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Bubble"))
+        {
+            _audioManager.PlaySound("CauldronDrop");
+            IngredientSO ingredient = other.gameObject.GetComponent<Ingredient>().ingredient;
+            AddIngredient(ingredient);
+            Destroy(other.gameObject);
+        }
+        
     }
 }

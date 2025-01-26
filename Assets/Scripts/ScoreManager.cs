@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int recipeLevel)
     {
+        Debug.Log("Adding score");
         if(recipeLevel == 1)
         {
             score += 50;

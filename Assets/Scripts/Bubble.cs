@@ -19,15 +19,15 @@ public class Bubble : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-
     public void PoppingBubble()
     {
         // When the bubble pops remove the bubble from the list of bubbles to cycle
-        bubbleManagerInstance.RemoveBubble(gameObject);
-        Destroy(gameObject);
+        bubbleManagerInstance.RemoveBubble(gameObject);  
 
         _audioManager.PlaySound("Bubble");
 
         GameObject poppedIngredient = Instantiate(bubbleIngrendient.ingredientPrefab,transform.position,Quaternion.identity);
+        poppedIngredient.GetComponent<Ingredient>().ingredient = bubbleIngrendient;
+        Destroy(gameObject);
     }
 } 
