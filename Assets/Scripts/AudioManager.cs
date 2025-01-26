@@ -17,6 +17,10 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource _audioSource;
 
+    private AudioClip _currentAudioClip;
+
+    private bool isClipPaused;
+
     private void Awake()
     {
         if(instance == null)
@@ -32,6 +36,23 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+
+
+    private void Update()
+    {
+        if(GameManager.instance != null && GameManager.instance.isGamePaused && !isClipPaused)
+        {
+            isClipPaused = true;
+            PauseAudioClip();
+        }
+
+        if(GameManager.instance != null && !GameManager.instance.isGamePaused && isClipPaused)
+        {
+            isClipPaused = false;
+            UnPauseAudioClip();
+        }
+    }
+
 
     /// <summary>
     /// Play the sound based on the audioType inside the list of sounds
@@ -59,10 +80,21 @@ public class AudioManager : MonoBehaviour
         {
             if(audioType == audioSetup.audioTypeName)
             {
-                return audioSetup.audioClip;
+                _currentAudioClip = audioSetup.audioClip;
+                return _currentAudioClip;
             }
         }
 
         return null;
+    }
+
+    public void PauseAudioClip()
+    {
+        _audioSource.Pause();
+    }
+
+    public void UnPauseAudioClip()
+    {
+        _audioSource.UnPause();
     }
 }

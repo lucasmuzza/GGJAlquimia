@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/recipes.uss?fileID=7433441132597879392&amp;guid=2f16e2de9fcbe504a8f5d88fcf27c386&amp;type=3#recipes" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
         <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 100px; top: 50px;">
-            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 35px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
+            <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 60px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
         </engine:VisualElement>
         <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 325px; right: 100px;">
             <engine:TabView style="width: 500px; height: 600px;">

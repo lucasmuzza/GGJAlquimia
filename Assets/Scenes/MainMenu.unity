@@ -250,7 +250,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 1627bd4e627ce564e814506e3bf4dfa1, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 0d0b7bf3299b46d4b9e55f02ec808866, type: 3}
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenuUIDoc: {fileID: 1139697937}
   bindTemplate: {fileID: 9197481963319205126, guid: 0d1610888208e5b419c9a4261209e362, type: 3}
+  menuConfig: {fileID: 11400000, guid: fe00ee107cf792e44808195b1bb7274e, type: 2}
 --- !u!4 &1139697939
 Transform:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1488935351
+--- !u!1 &1769510593
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,23 +292,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1488935352}
-  - component: {fileID: 1488935353}
-  - component: {fileID: 1488935354}
-  m_Layer: 0
-  m_Name: AudioManager
+  - component: {fileID: 1769510595}
+  - component: {fileID: 1769510594}
+  - component: {fileID: 1769510596}
+  m_Layer: 5
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1488935352
+--- !u!114 &1769510594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769510593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 1627bd4e627ce564e814506e3bf4dfa1, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 0ef6b894ede2eae45a3a1bab357c627c, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!4 &1769510595
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488935351}
+  m_GameObject: {fileID: 1769510593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -316,44 +336,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488935353
+--- !u!114 &1769510596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488935351}
+  m_GameObject: {fileID: 1769510593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 234a5112850cbba4fa8cbb4833e47341, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a202127d0b8244e90c00a36a388179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSetups:
-  - audioClip: {fileID: 8300000, guid: bc9e5a52dd297694fa82c5087b93b1ca, type: 3}
-    audioTypeName: Test
-  - audioClip: {fileID: 8300000, guid: bc9e5a52dd297694fa82c5087b93b1ca, type: 3}
-    audioTypeName: Bubble
-  - audioClip: {fileID: 8300000, guid: caaebaebaf3f77247b70e217a4bcfef9, type: 3}
-    audioTypeName: PotionSucess
-  - audioClip: {fileID: 8300000, guid: 1f819817abea74f4ca00f7764398e5ad, type: 3}
-    audioTypeName: PotionFailed
-  - audioClip: {fileID: 8300000, guid: affaa96d65af57d4cbe7bec790a059b9, type: 3}
-    audioTypeName: Money
-  - audioClip: {fileID: 8300000, guid: 241642de3c3ec3c428db9aa69b9e36b8, type: 3}
-    audioTypeName: Cauldron
-  - audioClip: {fileID: 8300000, guid: fcd9dba4caca5f34bbd14bbbebb87b3a, type: 3}
-    audioTypeName: PageOne
-  - audioClip: {fileID: 8300000, guid: ddc04ea560546e04581220eab73de12c, type: 3}
-    audioTypeName: PageTwo
-  - audioClip: {fileID: 8300000, guid: 355d929265afa66458ce68dd742d85ce, type: 3}
-    audioTypeName: CauldronHit
---- !u!82 &1488935354
+  mainMenuUIDoc: {fileID: 1769510594}
+  optionsMenu: {fileID: 1139697938}
+--- !u!1 &1817769118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817769121}
+  - component: {fileID: 1817769120}
+  - component: {fileID: 1817769119}
+  m_Layer: 0
+  m_Name: 'AudioManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1817769119
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488935351}
+  m_GameObject: {fileID: 1817769118}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -444,50 +465,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1769510593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1769510595}
-  - component: {fileID: 1769510594}
-  - component: {fileID: 1769510596}
-  m_Layer: 5
-  m_Name: MainMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1769510594
+--- !u!114 &1817769120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769510593}
+  m_GameObject: {fileID: 1817769118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: 234a5112850cbba4fa8cbb4833e47341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 1627bd4e627ce564e814506e3bf4dfa1, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 0ef6b894ede2eae45a3a1bab357c627c, type: 3}
-  m_SortingOrder: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
---- !u!4 &1769510595
+  audioSetups:
+  - audioClip: {fileID: 8300000, guid: de869ca2327744149b786920e9ca1d75, type: 3}
+    audioTypeName: Button
+  - audioClip: {fileID: 8300000, guid: bc9e5a52dd297694fa82c5087b93b1ca, type: 3}
+    audioTypeName: Bubble
+  - audioClip: {fileID: 8300000, guid: caaebaebaf3f77247b70e217a4bcfef9, type: 3}
+    audioTypeName: PotionSucess
+  - audioClip: {fileID: 8300000, guid: 1f819817abea74f4ca00f7764398e5ad, type: 3}
+    audioTypeName: PotionFailed
+  - audioClip: {fileID: 8300000, guid: affaa96d65af57d4cbe7bec790a059b9, type: 3}
+    audioTypeName: Money
+  - audioClip: {fileID: 8300000, guid: 241642de3c3ec3c428db9aa69b9e36b8, type: 3}
+    audioTypeName: Cauldron
+  - audioClip: {fileID: 8300000, guid: fcd9dba4caca5f34bbd14bbbebb87b3a, type: 3}
+    audioTypeName: TabChange
+  - audioClip: {fileID: 8300000, guid: ddc04ea560546e04581220eab73de12c, type: 3}
+    audioTypeName: PageTwo
+  - audioClip: {fileID: 8300000, guid: 355d929265afa66458ce68dd742d85ce, type: 3}
+    audioTypeName: CauldronHit
+  - audioClip: {fileID: 8300000, guid: ae7b3d643755d6a41b72cf5c4628c826, type: 3}
+    audioTypeName: PotionRight
+--- !u!4 &1817769121
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769510593}
+  m_GameObject: {fileID: 1817769118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -496,20 +513,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1769510596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769510593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a202127d0b8244e90c00a36a388179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenuUIDoc: {fileID: 1769510594}
-  optionsMenu: {fileID: 1139697938}
 --- !u!1 &2031502678
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,4 +657,4 @@ SceneRoots:
   - {fileID: 2031502681}
   - {fileID: 1769510595}
   - {fileID: 1139697939}
-  - {fileID: 1488935352}
+  - {fileID: 1817769121}
