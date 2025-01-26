@@ -16,6 +16,9 @@ public class Cauldron : MonoBehaviour
     private VisualElement _rootVisualElement;
     private VisualElement _ingredientsIconsContainer;
 
+    private AudioManager _audioManager;
+    private AudioClip _cauldronAudioClip;
+
     private bool _potionReady;
 
     public UnityEvent<int> OnPotionMatched = new UnityEvent<int>();
@@ -26,13 +29,30 @@ public class Cauldron : MonoBehaviour
         cauldronUIDoc = GetComponent<UIDocument>();
         _rootVisualElement = cauldronUIDoc.rootVisualElement;
 
+        _audioManager = AudioManager.instance;
+
+        AudioSource cauldronAudio = this.gameObject.AddComponent<AudioSource>();
+        _cauldronAudioClip = _audioManager.GetSound("Cauldron");
+        
+        cauldronAudio.clip = _cauldronAudioClip;
+        cauldronAudio.loop = true;
+        cauldronAudio.playOnAwake = true;
+        cauldronAudio.Play();
+
         _ingredientsIconsContainer = _rootVisualElement.Q<VisualElement>("ingredientsIconsContainer");
+    }
+
+    public void Update()
+    {
+        
     }
 
     public void AddIngredient(IngredientSO ingredient)
     {
         ingredientsToMix.Add(ingredient);
         AddIngredientsIcon(ingredient);
+
+        _audioManager.PlaySound("CauldronDrop");
         CheckPotionReady();
     }
 

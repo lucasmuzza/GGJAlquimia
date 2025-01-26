@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public float score;
     private Cauldron _cauldron;
+    private AudioManager _audioManager;
     
     private void Awake()
     {
@@ -23,6 +24,8 @@ public class ScoreManager : MonoBehaviour
     {
         _cauldron = FindFirstObjectByType<Cauldron>();
 
+        _audioManager = AudioManager.instance;
+
         _cauldron.OnPotionMatched.AddListener(AddScore);
     }
 
@@ -40,6 +43,8 @@ public class ScoreManager : MonoBehaviour
         {
             score += 300;
         }
+
+        _audioManager.PlaySound("Money");
     }
 
     public float GetScore()

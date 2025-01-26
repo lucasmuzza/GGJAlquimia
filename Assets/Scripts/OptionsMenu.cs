@@ -17,6 +17,9 @@ public class OptionsMenu : MonoBehaviour
     private Button _mainMenuButton;
     private Button _saveBindsButton;
     private Button _resetBindsButton;
+    private Button _changeBindButton;
+
+    private AudioManager _audioManager;
     
     private RebindingDisplay _rebindingDisplay;
     private List<InputActionReference> _defaultActions = new List<InputActionReference>();
@@ -30,28 +33,46 @@ public class OptionsMenu : MonoBehaviour
         rootVisualElement.style.display = DisplayStyle.None;
 
         _tabView = rootVisualElement.Q<TabView>("tabs");
-
-        _mainMenuButton = rootVisualElement.Q<Button>("mainMenuButton");
-        _mainMenuButton.clicked += LoadMainMenu;
         
         _bindsContainer = _tabView.Q<VisualElement>("bindsContainer");
 
         _rebindingDisplay = GetComponent<RebindingDisplay>();
         _rebindingDisplay.OnBindUpdate.AddListener(UpdatingRebind);
+
         _defaultActions = _rebindingDisplay.GetDefaultBinds();
 
+        _mainMenuButton = rootVisualElement.Q<Button>("mainMenuButton");
+        _mainMenuButton.clicked += LoadMainMenu;
+
         _saveBindsButton = _bindsContainer.Q<Button>("saveButton");
-        _saveBindsButton.clicked += _rebindingDisplay.Save;
+        _saveBindsButton.clicked += SaveBinds;
 
         _resetBindsButton = _bindsContainer.Q<Button>("resetButton");
-        _resetBindsButton.clicked += _rebindingDisplay.ResetBinds;
+        _resetBindsButton.clicked += ResetBinds;
+
+        _audioManager = AudioManager.instance;
 
         DisplayDefaultBinds();
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                rootVisualElement.style.display = DisplayStyle.None;
+            }
+        }
+    }
+
+
+    //TODO: Change the sound to the button sound
     private void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+
+        _audioManager.PlaySound("Test");
     }
 
     #region  Rebinding Tab Functions
@@ -73,7 +94,7 @@ public class OptionsMenu : MonoBehaviour
 
             _bindTextDic.Add(i,_currentBind);
 
-            Button _changeBindButton = bindTemplateVisualElement.Q<Button>("configBindButton");
+            _changeBindButton = bindTemplateVisualElement.Q<Button>("configBindButton");
             _changeBindButton.text = "Change Bind";
             
             // Pass the specific InputActionReference to the Rebind method
@@ -105,11 +126,14 @@ public class OptionsMenu : MonoBehaviour
 
     private void Rebind(InputActionReference actionReference, Label currentBind)
     {
+
+       _audioManager.PlaySound("Test");
+
         currentBind.text = "Waiting for Input....";
 
         if (actionReference != null)
         {
-            _rebindingDisplay.StartRebinding(actionReference, currentBind); // Pass the Label here
+            _rebindingDisplay.StartRebinding(actionReference, currentBind);
         }
         else
         {
@@ -134,10 +158,20 @@ public class OptionsMenu : MonoBehaviour
         _bindsContainer.MarkDirtyRepaint();
         Debug.Log($"Rebinding updated from: {oldBindText} to: {newBindText}");
     }
+    
+    private void SaveBinds()
+    {
+        _rebindingDisplay.Save();
+
+       _audioManager.PlaySound("Test");
+    }
 
     private void ResetBinds()
     {
         _rebindingDisplay.ResetBinds();
+
+        _audioManager.PlaySound("Test");
+
     }
     #endregion
 }

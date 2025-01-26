@@ -134,7 +134,7 @@ public class RebindingDisplay : MonoBehaviour
         }
 
         // Update the Label text directly
-        currentBind.text = rebindedText.ToUpper();
+        currentBind.text = rebindedText.ToLower();
 
         OnBindUpdate?.Invoke(oldBindText, rebindedText);
 
