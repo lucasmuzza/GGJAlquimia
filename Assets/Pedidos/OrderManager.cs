@@ -14,7 +14,7 @@ public class OrderManager : MonoBehaviour
     public Transform spawnLocation;
     private GameObject instantiatedNPCs;
 
-    
+    private AudioManager _audioManager;
     private DialogueSystem _dialogueSystem;
 
     private bool _npcActive = false;
@@ -22,6 +22,8 @@ public class OrderManager : MonoBehaviour
     void Start()
     {
         _dialogueSystem = FindFirstObjectByType<DialogueSystem>();
+
+        _audioManager = AudioManager.instance;
 
         if(!_npcActive)
         {
@@ -35,12 +37,14 @@ public class OrderManager : MonoBehaviour
 
     public void OnPotionSucess()
     {
+        _audioManager.PlaySound("PotionSucess");
         Destroy(instantiatedNPCs);
         _npcActive = false;
     }
 
     public void OnPotionFailed()
     {
+        _audioManager.PlaySound("PotionFailure");
         Destroy(instantiatedNPCs);
         _npcActive = false;
     }
