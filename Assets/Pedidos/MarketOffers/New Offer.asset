@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Offer
   m_EditorClassIdentifier: 
   offers:
-  - ingredient: {fileID: 11400000, guid: 483c227bd2998254a8f31f376c77c63c, type: 2}
+  - ingredient: {fileID: 11400000, guid: 9428a01c9ba240747840161da02d98dc, type: 2}
     price: 50
   - ingredient: {fileID: 11400000, guid: 169ec5f705708ea449dcb7b93aa3e7e8, type: 2}
     price: 20

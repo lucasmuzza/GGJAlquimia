@@ -191,8 +191,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f2f5d80ae1705346ad6979493e30027, type: 2}
   - {fileID: 11400000, guid: 0f2f5d80ae1705346ad6979493e30027, type: 2}
   stockManager: {fileID: 0}
-  ScoreManager: {fileID: 0}
+  scoreManager: {fileID: 0}
   refreshPrice: 10
+  openAndCloseMarket: 0
 --- !u!1 &6582125208910032002
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +349,10 @@ PrefabInstance:
     - target: {fileID: 1219077429595001061, guid: 77943a81fcf93194085d56995f5d06b2, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108966611161308580, guid: 77943a81fcf93194085d56995f5d06b2, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6039216
       objectReference: {fileID: 0}
     - target: {fileID: 5478742240361209907, guid: 77943a81fcf93194085d56995f5d06b2, type: 3}
       propertyPath: market

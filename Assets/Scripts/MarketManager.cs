@@ -15,8 +15,9 @@ public class MarketManager : MonoBehaviour
 
     [SerializeField] private float refreshPrice;
 
-    [SerializeField] private KeyCode openMarket;
-    [SerializeField] private KeyCode closeMarket;
+    [SerializeField] private KeyCode openAndCloseMarket;
+    private bool isMarketOpen = false;
+    
 
     void Start()
     {
@@ -42,16 +43,18 @@ public class MarketManager : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKeyDown(openMarket))
+        if(Input.GetKeyDown(openAndCloseMarket) && !isMarketOpen)
         {
             market.SetActive(true);
             transform.GetChild(1).gameObject.SetActive(true);
+            isMarketOpen = true;
             Time.timeScale = 0;
         }
-        else if(Input.GetKeyDown(closeMarket))
+        else if(Input.GetKeyDown(openAndCloseMarket) && isMarketOpen)
         {
             market.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(false);
+            isMarketOpen = false;
             Time.timeScale = 1;
         }
     }
