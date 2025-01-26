@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationSO: {fileID: 11400000, guid: 2d60861d57bac0749b60f3ec4c750031, type: 2}
+  requestedPotion: 0
 --- !u!61 &4642433328205084952
 BoxCollider2D:
   m_ObjectHideFlags: 0

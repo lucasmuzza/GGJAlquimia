@@ -1,0 +1,30 @@
+.recipePage {
+    align-self: center;
+    justify-content: center;
+    align-items: stretch;
+    -unity-text-align: middle-center;
+    -unity-font-definition: url("project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&guid=173d882a78efca549a133ce5c2a60aef&type=3#BiedermeierKursiv");
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    width: 500px;
+    height: 600px;
+}
+
+#unity-tab__header {
+    flex-grow: 1;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.59);
+    -unity-text-align: middle-center;
+    font-size: 15px;
+    -unity-font-definition: url("project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&guid=173d882a78efca549a133ce5c2a60aef&type=3#BiedermeierKursiv");
+    color: rgb(255, 255, 255);
+    white-space: normal;
+}
+
+.pageTexts {
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&guid=173d882a78efca549a133ce5c2a60aef&type=3#BiedermeierKursiv");
+    font-size: 14px;
+    left: 50px;
+}

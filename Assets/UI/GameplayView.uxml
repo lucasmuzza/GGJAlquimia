@@ -1,7 +1,51 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/recipes.uss?fileID=7433441132597879392&amp;guid=2f16e2de9fcbe504a8f5d88fcf27c386&amp;type=3#recipes" />
     <engine:VisualElement name="root" style="flex-grow: 1;">
-        <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 50px; top: 50px;">
+        <engine:VisualElement name="scoreContainer" style="flex-grow: 1; width: 300px; height: 100px; max-height: 100px; align-items: center; justify-content: center; align-self: flex-end; right: 100px; top: 50px;">
             <engine:Label text="Label" name="moneyLabel" style="flex-shrink: 0; flex-grow: 1; -unity-text-align: middle-center; width: 300px; font-size: 35px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;);" />
+        </engine:VisualElement>
+        <engine:VisualElement name="tabs" style="flex-grow: 1; align-self: flex-end; top: 325px; right: 100px;">
+            <engine:TabView style="width: 500px; height: 600px;">
+                <engine:Tab label="Primeira Pagina">
+                    <engine:VisualElement name="page" style="flex-grow: 1; width: 500px; height: 600px; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%201.png?fileID=2800000&amp;guid=9dda58cdb76969d4aa30eb00a43cb44e&amp;type=3#Pagina poções nivel 1&quot;); align-self: center; justify-content: center;">
+                        <engine:Label text="Poção de Cura" name="potionTitle" class="pageTexts" style="top: -30px; -unity-font-style: normal; left: 56px;" />
+                        <engine:Label text="Recupera a sua vitalidade" name="potionDescription" class="pageTexts" style="top: -30px; left: 50px;" />
+                        <engine:Label text="Ingredientes: Tentaculo de Kraken,&#10; Escama de Dragão, e Pena de Harpia" name="potionIngredients" class="pageTexts" style="top: -30px;" />
+                        <engine:Label text="Poção de Cura" name="potionTitle" class="pageTexts" style="top: 15px; -unity-font-style: normal; left: -50px;" />
+                        <engine:Label text="Recupera a sua vitalidade" name="potionDescription" class="pageTexts" style="top: 15px; left: -50px;" />
+                        <engine:Label text="Ingredientes: Tentaculo de Kraken,&#10; Escama de Dragão, e Pena de Harpia" name="potionIngredients" class="pageTexts" style="top: 15px; left: -50px;" />
+                        <engine:Label text="Poção de Cura" name="thirdPotionTitle" class="pageTexts" style="top: 60px; -unity-font-style: normal; left: 50px;" />
+                        <engine:Label text="Recupera a sua vitalidade" name="potionDescription" class="pageTexts" style="top: 60px; left: 50px;" />
+                        <engine:Label text="Ingredientes: Tentaculo de Kraken,&#10; Escama de Dragão e Pena de Harpia" name="potionIngredients" class="pageTexts" style="top: 60px;" />
+                    </engine:VisualElement>
+                </engine:Tab>
+                <engine:Tab label="Segunda Pagina">
+                    <engine:VisualElement name="page" style="flex-grow: 1; width: 500px; height: 600px; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%202.png?fileID=2800000&amp;guid=a33ec4998b055224b8a052d65d9405d6&amp;type=3#Pagina poções nivel 2&quot;); align-self: center; justify-content: center;">
+                        <engine:Label text="Poção de Velocidade" name="potionTitle" class="pageTexts" style="top: -30px; -unity-font-style: normal; left: auto; right: 50px;" />
+                        <engine:Label text="Amplifica a capacidade de locomoção do individuo" name="potionDescription" class="pageTexts" style="top: -30px; left: auto; right: 50px;" />
+                        <engine:Label text="Ingredientes: Pena de Harpia, Olho do Ciclope,&#10; Bico de Grifo e Chifre de Unicórnio" name="potionIngredients" class="pageTexts" style="top: -30px; left: auto; right: 50px;" />
+                        <engine:Label text="Poção de Fortalecimento" name="potionTitle" class="pageTexts" style="top: 15px; -unity-font-style: normal; left: auto; right: -50px;" />
+                        <engine:Label text="Amplifica a vitalidade do usuário" name="potionDescription" class="pageTexts" style="top: 15px; left: auto; right: -50px;" />
+                        <engine:Label text="Ingredientes: Escama de Dragão, Flor de Golem,&#10; Osso de Lith e Tentáculo de Kraken" name="potionIngredients" class="pageTexts" style="top: 15px; left: auto; right: -50px;" />
+                        <engine:Label text="Poção de Purificação" name="thirdPotionTitle" class="pageTexts" style="top: 60px; -unity-font-style: normal; left: -50px;" />
+                        <engine:Label text="Retira todos os status nocivos ao individuo" name="potionDescription" class="pageTexts" style="top: 60px; left: auto; right: 50px;" />
+                        <engine:Label text="Ingredientes: Bico de Grifo, Flor de Golem,&#10; Escama de Dragão e Pena de Harpia" name="potionIngredients" class="pageTexts" style="top: 60px; right: 50px; left: auto;" />
+                    </engine:VisualElement>
+                </engine:Tab>
+                <engine:Tab label="Terceira Pagina">
+                    <engine:VisualElement name="page" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Pagina%20po%C3%A7%C3%B5es%20nivel%203.png?fileID=2800000&amp;guid=5a34bbf0a32c0264ba34e659a0525c79&amp;type=3#Pagina poções nivel 3&quot;); width: 500px; height: 600px; align-self: center; justify-content: center;">
+                        <engine:Label text="Poção da Verdade" name="potionTitle" class="pageTexts" style="top: -30px; -unity-font-style: normal; left: 50px;" />
+                        <engine:Label text="Será obrigado a dizer a verdade" name="potionDescription" class="pageTexts" style="top: -30px; left: 50px;" />
+                        <engine:Label text="Ingredientes: Olho do Ciclope, &#10;Bico de Grifom, Gema do Abismo,  &#10;Lagrima de Anjo e Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: -30px;" />
+                        <engine:Label text="Poção de Elevação Primordial" name="potionTitle" class="pageTexts" style="top: 15px; -unity-font-style: normal; left: -50px;" />
+                        <engine:Label text="Obtem parte do poder de uma das sete/oito entidades primordiais" name="potionDescription" class="pageTexts" style="top: 15px; left: -50px;" />
+                        <engine:Label text="Ingredientes: Tentáculo de Kraken; Escama de Dragão,&#10; Gema do Abismo, Lagrima de Anjo e &#10;Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: 15px; left: -50px;" />
+                        <engine:Label text="Poção da Ressureição" name="thirdPotionTitle" class="pageTexts" style="top: 60px; -unity-font-style: normal; left: 50px;" />
+                        <engine:Label text="Traz um individuo de volta a vida" name="potionDescription" class="pageTexts" style="top: 60px; left: 50px;" />
+                        <engine:Label text="Ingredientes: Osso de Lith,&#10; Flor de Golem, Gema do Abismo,  &#10;Lagrima de Anjo e Coração da Vontade" name="potionIngredients" class="pageTexts" style="top: 50px;" />
+                    </engine:VisualElement>
+                </engine:Tab>
+            </engine:TabView>
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
