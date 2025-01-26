@@ -16,4 +16,6 @@ MonoBehaviour:
   recipeRarityLevel: 1
   potionType: 0
   ingredients:
-  - {fileID: 11400000, guid: 78f7cc2a04cdcec4cadc39434de3cafd, type: 2}
+  - {fileID: 11400000, guid: 169ec5f705708ea449dcb7b93aa3e7e8, type: 2}
+  - {fileID: 11400000, guid: fe8f8c9575cea474eaf890ed01a61b7d, type: 2}
+  - {fileID: 11400000, guid: c2ee28bbc5f887b40a43cfdcd1deaa8e, type: 2}

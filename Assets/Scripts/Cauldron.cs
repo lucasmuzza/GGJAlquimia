@@ -10,9 +10,11 @@ using UnityEngine.UIElements;
 public class Cauldron : MonoBehaviour
 {
     public PotionRecipeSO potionRecipe; // this is the current recipe that is given by the order manager
+    public PotionOrderManager potionOrderManager;
     public UIDocument cauldronUIDoc;
     public VisualTreeAsset ingredientIconTemplate;
     public List<IngredientSO> ingredientsToMix = new List<IngredientSO>();
+    public Material _cauldronMat;
 
     private VisualElement _rootVisualElement;
     private VisualElement _ingredientsIconsContainer;
@@ -32,6 +34,9 @@ public class Cauldron : MonoBehaviour
 
         _audioManager = AudioManager.instance;
 
+        potionOrderManager = PotionOrderManager.instance;
+        potionOrderManager.potionToMatch.AddListener(SetPotionRecipe);
+
         AudioSource cauldronAudio = this.gameObject.AddComponent<AudioSource>();
         _cauldronAudioClip = _audioManager.GetSound("Cauldron");
         
@@ -43,12 +48,21 @@ public class Cauldron : MonoBehaviour
         _ingredientsIconsContainer = _rootVisualElement.Q<VisualElement>("ingredientsIconsContainer");
     }
 
+    private void SetPotionRecipe(PotionRecipeSO potion)
+    {
+        potionRecipe = potion;
+    }
+
     public void AddIngredient(IngredientSO ingredient)
     {
         Debug.Log($"The ingredient to add is {ingredient}");
 
         ingredientsToMix.Add(ingredient);
         AddIngredientsIcon(ingredient);
+
+        _cauldronMat.SetFloat("_SplashTime",Time.time);
+        _cauldronMat.SetColor("_ColorA",_cauldronMat.GetColor("_ColorB"));
+        _cauldronMat.SetColor("_ColorB", new Vector4(Random.value,Random.value,Random.value,1));
 
         _audioManager.PlaySound("CauldronDrop");
         CheckPotionReady();
@@ -136,7 +150,8 @@ public class Cauldron : MonoBehaviour
         ingredientsToMix.Clear();
         ClearIngredientsIcon();
 
-        // Fire the event to notify that the potion failed
+        potionOrderManager.GenerateOrder();
+
         OnPotionUnmatched?.Invoke();
     }
 
@@ -151,6 +166,7 @@ private IEnumerator HandleSuccessfulPotion(float waitTime)
     // Add score based on the recipe rarity level
     ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
 
+    potionOrderManager.GenerateOrder();
     // Reset potion ready flag
     _potionReady = false;
 }

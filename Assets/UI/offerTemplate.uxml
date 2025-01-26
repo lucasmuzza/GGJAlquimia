@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
+    <engine:VisualElement name="offerTemplate" style="flex-grow: 1; width: 640px; height: 1080px; max-height: 1080px; max-width: 640px; align-items: center; align-self: center;">
+        <engine:VisualElement name="offerImage" style="flex-grow: 1; width: 200px; height: 200px; max-width: 200px; max-height: 200px; top: 100px; background-color: rgba(0, 0, 0, 0.55);" />
+        <engine:Label text="Label" name="offerIngredientName" class="offerText" style="top: 200px; width: 200px; height: 50px; -unity-text-align: middle-center; max-height: 50px;" />
+        <engine:Label text="Label" name="offerIngredientPrice" class="offerText" style="max-height: 50px; top: 350px;" />
+        <engine:Label text="Label" name="offerIngredientDescription" class="offerText" style="max-height: 50px; top: 200px;" />
+        <engine:Button text="Button" name="buyButton" class="UIButtons" style="top: 380px; align-self: center; align-items: center; justify-content: center; flex-shrink: 1; flex-grow: 0; width: 200px; height: 50px;" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e1a7e71f01ea5498a36a0cf09efbad, type: 3}
   m_Name: BicoDeGrifo
   m_EditorClassIdentifier: 
-<<<<<<<< HEAD:Assets/Dialogos/New Ingredient.asset
-  ingredientName: 
-========
   ingredientName: Bico de Grifo
->>>>>>>> Developer:Assets/Scripts/IngredientSO/BicoDeGrifo.asset
   ingredientDescription: 
   ingredientRarity: 0
-  ingredientPrefab: {fileID: 0}
-  ingredientMaterial: {fileID: 0}
+  ingredientPrefab: {fileID: 8348013283779957691, guid: a3af662e83031aa4abe6a669abff70f7, type: 3}
   ingredientIcon: {fileID: -953898427, guid: 747369a50eb97af4db05183ef76ac96c, type: 3}

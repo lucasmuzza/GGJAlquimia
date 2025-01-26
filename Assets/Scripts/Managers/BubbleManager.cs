@@ -149,8 +149,12 @@ public class BubbleManager : MonoBehaviour
         // Assign the ingredient to the bubble
         bubbleComponent.bubbleIngrendient = ingredient;
 
+        GameObject prefab = bubbleComponent.bubbleIngrendient.ingredientPrefab;
+
+        Ingredient ingredientFromPrefab = prefab.GetComponent<Ingredient>();
+
         // Pass the ingredientSO to the ingredient inside the bubble
-        bubbleComponent.bubbleIngrendient.ingredientPrefab.GetComponent<Ingredient>().ingredient = ingredient;
+        ingredientFromPrefab.ingredient = ingredient;
 
         bubble.SetActive(false); // Deactivate the bubble initially
 

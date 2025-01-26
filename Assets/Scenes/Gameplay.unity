@@ -227,8 +227,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 8859984}
   defaultKeyBinds:
   - {fileID: 2161755775874236477, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
-  - {fileID: -7982767975851491376, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
-  - {fileID: -833818357371318489, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
+  - {fileID: -426366113374318092, guid: d4f69eb1a29f7cf4f99f5a30e2c8770c, type: 3}
   inputKeyBinds: []
   OnBindUpdate:
     m_PersistentCalls:
@@ -313,6 +312,7 @@ MonoBehaviour:
   cauldronUIDoc: {fileID: 254485287}
   ingredientIconTemplate: {fileID: 9197481963319205126, guid: 92b78b46009c2c84187454400d0c84bf, type: 3}
   ingredientsToMix: []
+  _cauldronMat: {fileID: 2100000, guid: 37ad99057b262404486f414c28046842, type: 2}
   OnPotionMatched:
     m_PersistentCalls:
       m_Calls: []
@@ -353,17 +353,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.048958898, y: 0.6714332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 6.47, y: 5.76}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.587814, y: 3.1821556}
   m_EdgeRadius: 0
 --- !u!212 &254485285
 SpriteRenderer:
@@ -409,8 +409,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.118903525, g: 0.124847874, b: 0.1509434, a: 1}
+  m_Sprite: {fileID: -7519090046627541496, guid: da045836db630954481ed32898f6123c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -429,8 +429,8 @@ Transform:
   m_GameObject: {fileID: 254485282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: -3.28, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -454,6 +454,92 @@ MonoBehaviour:
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
+--- !u!1 &904199295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904199297}
+  - component: {fileID: 904199299}
+  - component: {fileID: 904199298}
+  m_Layer: 0
+  m_Name: Merchant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904199297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904199295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6303296, y: -2.2044964, z: 0.051502936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &904199298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904199295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 1627bd4e627ce564e814506e3bf4dfa1, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: c8172af1f932efd4d94f2f9af715758d, type: 3}
+  m_SortingOrder: 5
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!114 &904199299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904199295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d633e2ebbc99fb44bfc4c3080096363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientsSO:
+  - {fileID: 11400000, guid: 483c227bd2998254a8f31f376c77c63c, type: 2}
+  - {fileID: 11400000, guid: 169ec5f705708ea449dcb7b93aa3e7e8, type: 2}
+  - {fileID: 11400000, guid: 78f7cc2a04cdcec4cadc39434de3cafd, type: 2}
+  - {fileID: 11400000, guid: 9428a01c9ba240747840161da02d98dc, type: 2}
+  - {fileID: 11400000, guid: fe8f8c9575cea474eaf890ed01a61b7d, type: 2}
+  - {fileID: 11400000, guid: 0638b7ac98098c74bb595c36ca39db78, type: 2}
+  - {fileID: 11400000, guid: c2ca66187034b5046a0a15ba01f82b3f, type: 2}
+  - {fileID: 11400000, guid: 37cad5db62caf8249ab6c719c8890852, type: 2}
+  - {fileID: 11400000, guid: c2ee28bbc5f887b40a43cfdcd1deaa8e, type: 2}
+  - {fileID: 11400000, guid: 1ff483d81341cc9448e948f429ee28d3, type: 2}
+  - {fileID: 11400000, guid: ed703040666c1de45874a7362bcc8d89, type: 2}
+  stockManager: {fileID: 1373752222}
+  merchantUIDoc: {fileID: 904199298}
+  offerTemplate: {fileID: 9197481963319205126, guid: 4967ea8685f749b488ecd6b74ad44346, type: 3}
+  playerInputHandler: {fileID: 1726463030}
+  scoreManager: {fileID: 8859988}
+  audioManager: {fileID: 1179338064}
+  ingredientPrice: 0
+  levelOnePrice: 0
+  levelTwoPrice: 0
+  levelThreePrice: 0
 --- !u!1 &991916548
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +960,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1459013325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459013327}
+  - component: {fileID: 1459013326}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1459013326
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459013325}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37ad99057b262404486f414c28046842, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1459013327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459013325}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: -2.137, z: 0}
+  m_LocalScale: {x: 2.7778573, y: 1.3951, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493635781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,10 +1322,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1726463031}
+  buyStock: {fileID: 0}
   onGamePaused:
     m_PersistentCalls:
       m_Calls: []
   onChangedSceneView:
+    m_PersistentCalls:
+      m_Calls: []
+  onMerchantCalled:
     m_PersistentCalls:
       m_Calls: []
   hasPaused: 0
@@ -1229,6 +1406,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e41118db-ed2d-4034-bbd4-eaf3910b5166
     m_ActionName: 'Gameplay/ChangeToClientView[/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1726463030}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: MerchantInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7c48f69d-206c-4c1c-8a76-72d1c875b4db
+    m_ActionName: 'Gameplay/Merchant[/Keyboard/m]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -1578,3 +1771,5 @@ SceneRoots:
   - {fileID: 1929121498}
   - {fileID: 2107649067}
   - {fileID: 1493635784}
+  - {fileID: 1459013327}
+  - {fileID: 904199297}
