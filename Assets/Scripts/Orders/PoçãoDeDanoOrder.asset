@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 394459039cdd0a84e83d0b25f574f8ff, type: 3}
-  m_Name: PotionOrder
+  m_Name: "Po\xE7\xE3oDeDanoOrder"
   m_EditorClassIdentifier: 
-  potionName: 
+  potionName: "Po\xE7\xE3o de Dano"
   potionDescription: 
   potionSprite: {fileID: 0}
-  potionRecipe: {fileID: 0}
+  potionRecipe: {fileID: 11400000, guid: 11614ec9da42ec244b520c07d2123776, type: 2}

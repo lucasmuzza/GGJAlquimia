@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012c5f3656c15b240b29e863ff94fe24, type: 3}
-  m_Name: PotionDatabase
+  m_Script: {fileID: 11500000, guid: 394459039cdd0a84e83d0b25f574f8ff, type: 3}
+  m_Name: PocaoDeCuraOrder
   m_EditorClassIdentifier: 
-  potionOrders: []
+  potionName: "Po\xE7\xE3o Eleva\xE7\xE3o Primordial"
+  potionDescription: 
+  potionSprite: {fileID: 0}
+  potionRecipe: {fileID: 11400000, guid: 7d546181777b3f547949cb92d6975eae, type: 2}
