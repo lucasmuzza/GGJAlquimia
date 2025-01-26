@@ -40,10 +40,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _QueueControl: 0
-    - _SplashTime: 11.919995
+    - _SplashTime: 11.099996
     m_Colors:
     - _ClickPos: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _ColorA: {r: 0.6132307, g: 0.25014305, b: 0.7919227, a: 1}
-    - _ColorB: {r: 0.6004185, g: 0.037694458, b: 0.6393977, a: 1}
+    - _ColorA: {r: 0.6789333, g: 0.566916, b: 0.8289317, a: 1}
+    - _ColorB: {r: 0.49993044, g: 0.907428, b: 0.010471703, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
