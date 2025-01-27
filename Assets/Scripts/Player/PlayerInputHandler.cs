@@ -6,6 +6,7 @@ public class PlayerInputHandler : MonoBehaviour
 {
     public PlayerInput playerInput;
     public BuyStock buyStock;
+    public GameManager gameManager;
     public UnityEvent<bool> onGamePaused = new UnityEvent<bool>();
     public UnityEvent<string> onChangedSceneView = new UnityEvent<string>();
     public UnityEvent onMerchantCalled = new UnityEvent();
@@ -13,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+        gameManager = GameManager.instance;
         buyStock = BuyStock.instance;
     }
 
@@ -44,10 +46,16 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void MerchantInput(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if(context.performed && !gameManager.isGamePaused)
         {
             Debug.Log("Key pressed");
             buyStock.GenerateOffers();
+            gameManager.isGamePaused = true;
+        }
+
+        if(context.performed && gameManager.isGamePaused)
+        {
+            gameManager.isGamePaused = false;
         }
     }
 }

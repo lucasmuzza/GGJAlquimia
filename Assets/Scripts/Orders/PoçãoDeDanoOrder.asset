@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: "Po\xE7\xE3o de Dano"
   potionDescription: 
-  potionSprite: {fileID: 0}
+  potionSprite: {fileID: -450189762, guid: 9e4d7e60af9c0a648821fa555914599b, type: 3}
   potionRecipe: {fileID: 11400000, guid: 11614ec9da42ec244b520c07d2123776, type: 2}

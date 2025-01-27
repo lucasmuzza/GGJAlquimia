@@ -11,12 +11,6 @@
                             <engine:Button text="Resetar Teclas" name="resetButton" class="UIButtons" style="flex-direction: column-reverse; width: 600px; justify-content: center; align-self: center; margin-top: 30px; margin-right: 0; margin-bottom: 30px; margin-left: 0; font-size: 40px; white-space: normal; background-color: rgb(87, 82, 72); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; word-spacing: 20px;" />
                         </engine:VisualElement>
                     </engine:Tab>
-                    <engine:Tab name="videoConfigTab" icon-image="project://database/Assets/Sprites/1x/gear.png?fileID=2800000&amp;guid=4f85acd90792f1942852653838a2b006&amp;type=3#gear" label=" Video">
-                        <engine:VisualElement name="videoContainer" style="flex-grow: 1; width: 800px; height: 1000px; background-color: rgba(48, 49, 55, 0); justify-content: space-evenly; align-self: center; background-image: none;" />
-                    </engine:Tab>
-                    <engine:Tab name="audioConfigTab" icon-image="project://database/Assets/Sprites/1x/audioOn.png?fileID=2800000&amp;guid=9d2b92071f80fef459490c6dc342b528&amp;type=3#audioOn" label=" Audio">
-                        <engine:VisualElement name="audioContainer" style="flex-grow: 1; width: 800px; height: 1000px; background-color: rgba(48, 49, 55, 0); justify-content: space-evenly; align-self: center; background-image: none;" />
-                    </engine:Tab>
                 </engine:TabView>
             </engine:VisualElement>
         </engine:VisualElement>

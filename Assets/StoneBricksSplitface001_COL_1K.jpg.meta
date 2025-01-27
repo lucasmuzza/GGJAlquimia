@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StoneBricksSplitface001_COL_1K_0: -2754913240215483709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

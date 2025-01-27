@@ -1,8 +1,10 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/offerText.uss?fileID=7433441132597879392&amp;guid=e2dff2212d5f4eb42a146811bd0f3e3e&amp;type=3#offerText" />
-    <engine:VisualElement name="root" style="flex-grow: 1; white-space: nowrap; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; align-self: center; width: 1920px; height: 1080px; display: none;">
-        <engine:VisualElement name="firstOfferHolder" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px; align-self: center; justify-content: flex-start; align-items: center;" />
-        <engine:VisualElement name="secondOfferHolder" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px;" />
-        <engine:VisualElement name="thirdOfferHolder" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px;" />
+    <engine:VisualElement name="root" picking-mode="Ignore" style="flex-grow: 1; white-space: nowrap; flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; align-self: center; width: 1920px; height: 1080px; display: flex;">
+        <engine:VisualElement name="OffersContainer" picking-mode="Ignore" style="flex-grow: 1; justify-content: space-evenly; align-self: center; width: 1920px; height: 1080px; max-width: 1920px; max-height: 1080px; flex-direction: row;">
+            <engine:VisualElement name="firstOfferHolder" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px; align-self: center; justify-content: flex-start; align-items: center;" />
+            <engine:VisualElement name="secondOfferHolder" picking-mode="Ignore" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px;" />
+            <engine:VisualElement name="thirdOfferHolder" picking-mode="Ignore" style="flex-grow: 1; width: 640px; height: 1080px; background-color: rgba(0, 0, 0, 0.59); max-width: 640px;" />
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

@@ -538,9 +538,9 @@ MonoBehaviour:
   scoreManager: {fileID: 8859988}
   audioManager: {fileID: 1179338064}
   ingredientPrice: 0
-  levelOnePrice: 0
+  levelOnePrice: 25
   levelTwoPrice: 0
-  levelThreePrice: 0
+  levelThreePrice: 500
 --- !u!1 &991916548
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialIngredientsStock: []
   currentStock: []
-  initialIngredientsAmount: 10
+  initialIngredientsAmount: 20
   commonProbability: 0.65
   rareProbability: 0.35
   commonIngredientPool:
@@ -1498,6 +1498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1726463031}
   buyStock: {fileID: 0}
+  gameManager: {fileID: 0}
   onGamePaused:
     m_PersistentCalls:
       m_Calls: []

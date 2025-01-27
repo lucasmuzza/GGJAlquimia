@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: "Po\xE7\xE3o da Percepcao"
   potionDescription: 
-  potionSprite: {fileID: 0}
+  potionSprite: {fileID: 1430470482, guid: 9e4d7e60af9c0a648821fa555914599b, type: 3}
   potionRecipe: {fileID: 11400000, guid: e48d07766c03ae146b7bed5095c808c3, type: 2}

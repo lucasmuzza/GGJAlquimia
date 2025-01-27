@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 9e4d7e60af9c0a648821fa555914599b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8999240683470410533
+    second: "Po\xE7oes_0"
+  - first:
+      213: -4948348151290042389
+    second: "Po\xE7oes_1"
+  - first:
+      213: 8675995727476532403
+    second: "Po\xE7oes_2"
+  - first:
+      213: -2368460654816817485
+    second: "Po\xE7oes_3"
+  - first:
+      213: 1731479562777743078
+    second: "Po\xE7oes_4"
+  - first:
+      213: 6594460722471627400
+    second: "Po\xE7oes_5"
+  - first:
+      213: 520596084757063111
+    second: "Po\xE7oes_6"
+  - first:
+      213: -5550875263002342625
+    second: "Po\xE7oes_7"
+  - first:
+      213: -8108703429700024067
+    second: "Po\xE7oes_8"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Po\xE7oes_0"
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1967
+        width: 574
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0227c3277a52748a00294b72506b9a
+      internalID: 512494372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_1"
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1916
+        width: 547
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c425002ae96944bbfb364603c332c1
+      internalID: -450189762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_2"
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 1955
+        width: 421
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f688c06dfcf9604e8fe29299e4077a4
+      internalID: 1430470482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_3"
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1077
+        width: 268
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d03c4ce18ba51c42aa55b6e7344a88d
+      internalID: -25085410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_4"
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1074
+        width: 757
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fbecbfe306b104980234b4b2ecb6f0
+      internalID: 1628450107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_5"
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 1056
+        width: 304
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75de33abceb14e34cba60f499f1a2d2b
+      internalID: -1121250750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_6"
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 152
+        width: 474
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a794d43855c69245a87749651dae709
+      internalID: -1917583535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_7"
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 171
+        width: 339
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01183d1fde3b86489ead8b636de40d8
+      internalID: -1343408885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Po\xE7oes_8"
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 239
+        width: 678
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c26dcbd5757b134a96559e602f8813e
+      internalID: -370184817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3d9582cf8aa4af84d8f824db3e4c807f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Po\xE7oes_0": 512494372
+      "Po\xE7oes_1": -450189762
+      "Po\xE7oes_2": 1430470482
+      "Po\xE7oes_3": -25085410
+      "Po\xE7oes_4": 1628450107
+      "Po\xE7oes_5": -1121250750
+      "Po\xE7oes_6": -1917583535
+      "Po\xE7oes_7": -1343408885
+      "Po\xE7oes_8": -370184817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

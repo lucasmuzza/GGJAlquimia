@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: "Po\xE7\xE3o de Purifica\xE7\xE3o"
   potionDescription: 
-  potionSprite: {fileID: 0}
+  potionSprite: {fileID: 1628450107, guid: 9e4d7e60af9c0a648821fa555914599b, type: 3}
   potionRecipe: {fileID: 11400000, guid: c566a510e05ba564c999255daf668dab, type: 2}

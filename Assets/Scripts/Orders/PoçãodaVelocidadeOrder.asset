@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: "Po\xE7\xE3o de Velocidade"
   potionDescription: 
-  potionSprite: {fileID: 0}
+  potionSprite: {fileID: -25085410, guid: 9e4d7e60af9c0a648821fa555914599b, type: 3}
   potionRecipe: {fileID: 11400000, guid: e34ea88b7ee3e864da5e35532e35a158, type: 2}

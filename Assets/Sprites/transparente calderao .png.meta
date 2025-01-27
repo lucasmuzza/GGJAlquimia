@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      transparente calderao _0: -7519090046627541496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

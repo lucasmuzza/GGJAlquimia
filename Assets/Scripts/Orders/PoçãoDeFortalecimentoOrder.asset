@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: "Po\xE7\xE3o de Fortalecimento"
   potionDescription: 
-  potionSprite: {fileID: 0}
+  potionSprite: {fileID: -1121250750, guid: 9e4d7e60af9c0a648821fa555914599b, type: 3}
   potionRecipe: {fileID: 11400000, guid: 94cf4f0b95836c34a9ed8cae3f4b6182, type: 2}

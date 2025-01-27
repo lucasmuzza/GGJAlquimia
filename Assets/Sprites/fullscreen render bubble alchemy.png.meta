@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fullscreen render bubble alchemy_0: -6459044379020284747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

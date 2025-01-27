@@ -80,6 +80,7 @@ public class OptionsMenu : MonoBehaviour
         if (_audioManager != null)
         {
             _audioManager.PlaySound("Button");
+            GameManager.instance.isGamePaused = false;
         }
     }
 

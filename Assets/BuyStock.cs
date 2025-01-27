@@ -1,133 +1,157 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
 public class BuyStock : MonoBehaviour
 {
-  public static BuyStock instance;
-  public List<IngredientSO> ingredientsSO;
-  public IngredientStock stockManager;
+    public static BuyStock instance;
+    public List<IngredientSO> ingredientsSO;
+    public IngredientStock stockManager;
 
-  public UIDocument merchantUIDoc;
-  public VisualTreeAsset offerTemplate;
-  private VisualElement _rootVisualElement;
+    public UIDocument merchantUIDoc;
+    public VisualTreeAsset offerTemplate;
 
-  private VisualElement _offerImage;
+    private VisualElement _rootVisualElement;
 
-  private VisualElement firstOfferContainer;
-  private VisualElement secondOfferContainer;
-  private VisualElement thirdOfferContainer;
+    private VisualElement _offerImage;
 
-  private Label _offerIngredientName;
-  private Label _offerIngredientDescription;
-  private Label _offerIngredientPrice;
+    private VisualElement _offersContainer;
 
-  private Button _buyButton;
+    private VisualElement firstOfferContainer;
+    private VisualElement secondOfferContainer;
+    private VisualElement thirdOfferContainer;
 
-  public PlayerInputHandler playerInputHandler;
+    private Label _offerIngredientName;
+    private Label _offerIngredientDescription;
+    private Label _offerIngredientPrice;
 
-  public ScoreManager scoreManager;
-  public AudioManager audioManager;
-  public float ingredientPrice;
+    private Button _buyButton;
 
-  public float levelOnePrice;
-  public float levelTwoPrice;
-  public float levelThreePrice;
+    public PlayerInputHandler playerInputHandler;
 
-  private void Awake()
-  {
-      if(instance == null)
-      {
-        instance = this;
-        DontDestroyOnLoad(instance);
-      }
-      else
-      {
-        Destroy(gameObject);
-      }
-  }
+    public ScoreManager scoreManager;
+    public AudioManager audioManager;
+    public float ingredientPrice;
 
+    public float levelOnePrice;
+    public float levelTwoPrice;
+    public float levelThreePrice;
 
-  private void Start()
-  {
-    playerInputHandler = FindFirstObjectByType<PlayerInputHandler>();
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
-    scoreManager = ScoreManager.instance;
-    audioManager = AudioManager.instance;
+    private void Start()
+    {
+        scoreManager = ScoreManager.instance;
+        audioManager = AudioManager.instance;
 
-    merchantUIDoc = GetComponent<UIDocument>();
-    _rootVisualElement = merchantUIDoc.rootVisualElement;
+        merchantUIDoc = GetComponent<UIDocument>();
+        _rootVisualElement = merchantUIDoc.rootVisualElement;
 
-    firstOfferContainer = _rootVisualElement.Q<VisualElement>("firstOfferHolder");
-    secondOfferContainer = _rootVisualElement.Q<VisualElement>("secondOfferHolder");
-    thirdOfferContainer = _rootVisualElement.Q<VisualElement>("thirdOfferHolder");
-  }
+        _offersContainer = _rootVisualElement.Q<VisualElement>("OffersContainer");
 
-  public void Enable()
-  {
+        _offersContainer.style.display = DisplayStyle.None;
 
-  }
+        firstOfferContainer = _rootVisualElement.Q<VisualElement>("firstOfferHolder");
+        secondOfferContainer = _rootVisualElement.Q<VisualElement>("secondOfferHolder");
+        thirdOfferContainer = _rootVisualElement.Q<VisualElement>("thirdOfferHolder");
 
-  
-  public void GenerateOffers()
-  {
-      Debug.Log("entered");
+        Debug.Assert(_rootVisualElement != null, "Root Visual Element is null. Is the UIDocument assigned?");
+    }
 
-          _rootVisualElement.style.display = DisplayStyle.Flex;
-      for(int i = 0; i < 3; i++)
-      {
-          int randomIndex = Random.Range(0,ingredientsSO.Count - 1);
+    public void GenerateOffers()
+    {
+        Debug.Log("entered");
 
-          IngredientSO ingredient = ingredientsSO[randomIndex];
+        _offersContainer.style.display = DisplayStyle.Flex;
 
-          var offer = offerTemplate.Instantiate();
+        firstOfferContainer.Clear();
+        secondOfferContainer.Clear();
+        thirdOfferContainer.Clear();
 
-          _offerImage = offer.Q<VisualElement>("offerImage");
+        for (int i = 0; i < 3; i++)
+        {
+            int randomIndex = Random.Range(0, ingredientsSO.Count - 1);
 
-          _offerIngredientName = offer.Q<Label>("offerIngredientName");
-          _offerIngredientDescription = offer.Q<Label>("offerIngredientDescription");
-          _offerIngredientPrice = offer.Q<Label>("offerIngredientPrice");
-          _buyButton = offer.Q<Button>("buyButton");
-          _buyButton.clicked += BuyItem;
+            IngredientSO ingredient = ingredientsSO[randomIndex];
 
-          _offerIngredientName.text = ingredient.ingredientName;
-          _offerIngredientDescription.text = ingredient.ingredientDescription;
-          _offerIngredientPrice.text = $"Preço: {DetermineIngredientPrice(ingredient.ingredientRarity).ToString()}";
+            var offer = offerTemplate.Instantiate();
 
-          if(i == 0) firstOfferContainer.Add(offer);
+            _offerImage = offer.Q<VisualElement>("offerImage");
 
-          if(i == 1) secondOfferContainer.Add(offer);
+            _offerImage = offer.Q<VisualElement>("offerImage");
+            _offerIngredientName = offer.Q<Label>("offerIngredientName");
+            _offerIngredientDescription = offer.Q<Label>("offerIngredientDescription");
+            _offerIngredientPrice = offer.Q<Label>("offerIngredientPrice");
+            _buyButton = offer.Q<Button>("buyButton");
 
-          if(i == 2) thirdOfferContainer.Add(offer);
-      }
+            // Bind the specific ingredient to the button click
+            _buyButton.clicked += () => BuyItem(ingredient);
 
-      
-  }
+            _offerImage.style.backgroundImage = new StyleBackground(ingredient.ingredientIcon);
+            _offerIngredientName.text = ingredient.ingredientName;
+            _offerIngredientDescription.text = ingredient.ingredientDescription;
 
-  public int DetermineIngredientPrice(IngredientRarity ingredientRarity)
-  {
-      if(ingredientRarity == IngredientRarity.Common)
-      {
-        ingredientPrice = levelOnePrice;
-      }
-     
-      else if(ingredientRarity == IngredientRarity.Rare)
-      {
-        ingredientPrice = levelThreePrice;
-      }
+            int price = DetermineIngredientPrice(ingredient.ingredientRarity);
+            Debug.Log(price);
+            _offerIngredientPrice.text = $"Preço: {price}";
 
-      return (int)ingredientPrice;
-  }
+            if (i == 0) firstOfferContainer.Add(offer);
 
-  public void BuyItem()
-  {
-    scoreManager.score -= ingredientPrice;
+            if (i == 1) secondOfferContainer.Add(offer);
 
-    _rootVisualElement.style.display = DisplayStyle.None;
-    audioManager.PlaySound("Money");
-  }
+            if (i == 2) thirdOfferContainer.Add(offer);
+        }
+    }
 
+    public int DetermineIngredientPrice(IngredientRarity ingredientRarity)
+    {
+        if (ingredientRarity == IngredientRarity.Common)
+        {
+            ingredientPrice = levelOnePrice;
+        }
+        else if (ingredientRarity == IngredientRarity.Rare)
+        {
+            ingredientPrice = levelThreePrice;
+        }
+
+        return (int)ingredientPrice;
+    }
+
+    public void BuyItem(IngredientSO ingredient)
+    {
+        int price = DetermineIngredientPrice(ingredient.ingredientRarity);
+
+        if (scoreManager.score >= price)
+        {
+            scoreManager.score -= price;
+
+            // Add the purchased ingredient to the stock
+            stockManager.AddIngredientToStock(ingredient);
+
+            audioManager.PlaySound("Money");
+
+            Debug.Log($"Bought {ingredient.ingredientName} for {price}");
+        }
+        else
+        {
+            Debug.Log("Not enough score to buy this ingredient.");
+        }
+
+        // Hide offers container after purchase
+        _offersContainer.style.display = DisplayStyle.None;
+
+        GameManager.instance.isGamePaused = false;
+    }
 }

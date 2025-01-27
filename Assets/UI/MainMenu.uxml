@@ -6,6 +6,6 @@
             <engine:Button text="Opções" name="OptionsButton" class="UIButtons" />
             <engine:Button text="Sair" name="QuitButton" class="UIButtons" />
         </engine:VisualElement>
-        <engine:VisualElement name="title" style="flex-grow: 1; align-self: center; justify-content: center; align-items: center; width: 800px; height: 800px; position: absolute; left: 800px; background-color: rgba(0, 0, 0, 0);" />
+        <engine:VisualElement name="title" style="flex-grow: 1; align-self: center; justify-content: center; align-items: center; width: 800px; height: 800px; position: absolute; left: 725px; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;project://database/Assets/Sprites/logo.png?fileID=2800000&amp;guid=3a66a0c2bdfeba540a134adf3a5bece0&amp;type=3#logo&quot;); top: -90px;" />
     </engine:VisualElement>
 </engine:UXML>

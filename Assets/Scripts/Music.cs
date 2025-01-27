@@ -24,8 +24,8 @@ public class Music : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
+        audioSource.clip = audioClip;
         audioSource.loop = true;
-        audioSource.playOnAwake = true;
 
         audioSource.Play();
     }
