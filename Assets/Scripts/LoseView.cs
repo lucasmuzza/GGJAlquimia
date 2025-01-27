@@ -7,6 +7,10 @@ public class LoseView : MonoBehaviour
     public UIDocument loseUIDoc;
 
     private Timer _timer;
+    private GameManager _gameManager;
+    private BubbleManager _bubbleManager;
+    private IngredientStock _stockManager;
+    private PotionOrderManager _potionOrderManager;
 
     private VisualElement _rootVisualElement;
 
@@ -21,10 +25,10 @@ public class LoseView : MonoBehaviour
         loseUIDoc = GetComponent<UIDocument>();
 
         _timer = Timer.instance;
-
+        
         _rootVisualElement = loseUIDoc.rootVisualElement;
 
-        _timeOfTheRun = _rootVisualElement.Q<Label>("TimeLabel");
+        _timeOfTheRun = _rootVisualElement.Q<Label>("TimerLabel");
         _timeOfTheRun.text = $"O tempo da run foi de: {_timer.GetElapsedTime()}";
 
         _mainMenuButton = _rootVisualElement.Q<Button>("MainMenuButton");
@@ -37,11 +41,13 @@ public class LoseView : MonoBehaviour
 
     private void LoadMainMenu()
     {
+        Destroy(_timer.gameObject);
         SceneManager.LoadScene("MainMenu");
     }
 
     private void QuitGame()
     {
+        Debug.Log("Closing the game");
         Application.Quit();
     }
 }

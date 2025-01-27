@@ -20,6 +20,10 @@ public class OptionsMenu : MonoBehaviour
     private Button _changeBindButton;
 
     private AudioManager _audioManager;
+    private GameManager _gameManager;
+    private BubbleManager _bubbleManager;
+    private IngredientStock _stockManager;
+    private Timer _timer;
     
     private RebindingDisplay _rebindingDisplay;
     private List<InputActionReference> _defaultActions = new List<InputActionReference>();
@@ -57,6 +61,10 @@ public class OptionsMenu : MonoBehaviour
         _resetBindsButton.clicked += ResetBinds;
 
         _audioManager = AudioManager.instance;
+        _gameManager = GameManager.instance;
+        _timer = Timer.instance;
+        _bubbleManager = BubbleManager.instance;
+        _stockManager = IngredientStock.instance;
 
         DisplayDefaultBinds();
     }
@@ -76,6 +84,11 @@ public class OptionsMenu : MonoBehaviour
     private void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+
+        Destroy(_timer.gameObject);
+        Destroy(_bubbleManager.gameObject);
+        Destroy(_gameManager.gameObject);
+        Destroy(_stockManager.gameObject);
 
         if (_audioManager != null)
         {

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public List<Camera> cameras;
     public string[] currentView;
     public bool isGamePaused;
+    public bool hasLost;
     public OptionsMenu optionsMenu;
 
     public int orderSucessAmount;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            // DontDestroyOnLoad(instance);
         }
 
         else
@@ -60,7 +61,12 @@ public class GameManager : MonoBehaviour
         {
             // Lose the game
             timer.StopTimer();
-            SceneManager.LoadScene("LoseScene");
+        }
+
+        if(orderFailedAmount >= 5 && !hasLost)
+        {
+            hasLost = true;
+            GameOver();
         }
     }
 
@@ -98,5 +104,10 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene("LoseScene");
     }
 }

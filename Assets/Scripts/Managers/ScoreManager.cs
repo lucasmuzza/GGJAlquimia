@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            // DontDestroyOnLoad(instance);
         }
         else
         {

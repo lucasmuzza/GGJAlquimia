@@ -36,9 +36,7 @@ public class PotionOrderManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
-
-            
+            // DontDestroyOnLoad(instance);
         }
         else
         {
@@ -67,7 +65,7 @@ public class PotionOrderManager : MonoBehaviour
 
         _dropClientButton = _orders.Q<Button>("DropClientButton");
 
-        _dropClientButton.clicked += OrderFailed;
+        _dropClientButton.clicked += OrderDropped;
 
         GenerateOrder();
     }
@@ -111,14 +109,22 @@ public class PotionOrderManager : MonoBehaviour
     public void OrderCompleted()
     {
         // Plays the sound of sucess and generate the next order
-        _audioManager.PlaySound("PotionSucess");
+        _audioManager.PlaySound("ClientHappy");
+        _gameManager.orderSucessAmount++;
+        GenerateOrder();
+    }
+
+    public void OrderDropped()
+    {
+        _gameManager.orderFailedAmount++;
         GenerateOrder();
     }
 
     public void OrderFailed()
     {
         // Plays the sound of failure and generate the next order
-        _audioManager.PlaySound("PotionFailure");
+        _audioManager.PlaySound("ClientSad");
+        _gameManager.orderFailedAmount++;
         GenerateOrder();
     }
 }

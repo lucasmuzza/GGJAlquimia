@@ -24,14 +24,13 @@ public class Timer : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(instance);
         }
         else
         {
             Destroy(gameObject);
             return;
-        }
-
-        DontDestroyOnLoad(gameObject);
+        }    
     }
 
     private void Start()

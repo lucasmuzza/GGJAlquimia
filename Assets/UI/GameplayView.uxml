@@ -52,6 +52,7 @@
                 </engine:Tab>
             </engine:TabView>
         </engine:VisualElement>
+        <engine:VisualElement name="ingredientStockContainer" style="flex-grow: 1; align-self: flex-start; align-items: stretch; justify-content: space-between; width: 250px; height: 450px; position: absolute; top: 500px; max-height: 800px; flex-direction: column; flex-wrap: wrap;" />
         <engine:Label text="Label" name="TimerLabel" style="bottom: 20px; left: -50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 45px; color: rgb(255, 255, 255);" />
     </engine:VisualElement>
 </engine:UXML>

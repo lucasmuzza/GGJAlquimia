@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            // DontDestroyOnLoad(instance);
 
             _audioSource = GetComponent<AudioSource>();
         }

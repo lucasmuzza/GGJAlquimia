@@ -191,9 +191,11 @@ public class Cauldron : MonoBehaviour
         ingredientsToMix.Clear();
         ClearIngredientsIcon();
 
-        potionOrderManager.GenerateOrder();
 
-        _gameManager.orderFailedAmount++;
+
+        potionOrderManager.OrderFailed();
+
+        // _gameManager.orderFailedAmount++;
 
         OnPotionUnmatched?.Invoke();
     }
@@ -209,9 +211,7 @@ public class Cauldron : MonoBehaviour
         // Add score based on the recipe rarity level
         ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
 
-        _gameManager.orderSucessAmount++;
-
-        potionOrderManager.GenerateOrder();
+        potionOrderManager.OrderCompleted();
         // Reset potion ready flag
         _potionReady = false;
     }

@@ -29,6 +29,8 @@ public class BuyStock : MonoBehaviour
     private Button _buyButton;
     private BubbleManager bubbleManager;
 
+    private GameplayView _gameplayView;
+
     public PlayerInputHandler playerInputHandler;
 
     public ScoreManager scoreManager;
@@ -44,7 +46,7 @@ public class BuyStock : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            // DontDestroyOnLoad(instance);
         }
         else
         {
@@ -82,17 +84,34 @@ public class BuyStock : MonoBehaviour
         secondOfferContainer.Clear();
         thirdOfferContainer.Clear();
 
+        // List to store already selected ingredients
+        List<IngredientSO> selectedIngredients = new List<IngredientSO>();
+
+        // Generate three unique offers
         for (int i = 0; i < 3; i++)
         {
-            int randomIndex = Random.Range(0, ingredientsSO.Count - 1);
+            IngredientSO ingredient = null;
 
-            IngredientSO ingredient = ingredientsSO[randomIndex];
+            // Ensure that the ingredient hasn't been selected already
+            bool ingredientIsUnique = false;
+
+            while (!ingredientIsUnique)
+            {
+                int randomIndex = Random.Range(0, ingredientsSO.Count);
+                ingredient = ingredientsSO[randomIndex];
+
+                // Check if the ingredient is already in the selected list
+                if (!selectedIngredients.Contains(ingredient))
+                {
+                    ingredientIsUnique = true;
+                    selectedIngredients.Add(ingredient);
+                }
+            }
 
             var offer = offerTemplate.Instantiate();
 
             _offerImage = offer.Q<VisualElement>("offerImage");
 
-            _offerImage = offer.Q<VisualElement>("offerImage");
             _offerIngredientName = offer.Q<Label>("offerIngredientName");
             _offerIngredientDescription = offer.Q<Label>("offerIngredientDescription");
             _offerIngredientPrice = offer.Q<Label>("offerIngredientPrice");
@@ -110,12 +129,12 @@ public class BuyStock : MonoBehaviour
             _offerIngredientPrice.text = $"Preço: {price}";
 
             if (i == 0) firstOfferContainer.Add(offer);
-
-            if (i == 1) secondOfferContainer.Add(offer);
-
-            if (i == 2) thirdOfferContainer.Add(offer);
+            else if (i == 1) secondOfferContainer.Add(offer);
+            else if (i == 2) thirdOfferContainer.Add(offer);
         }
     }
+
+
 
     public int DetermineIngredientPrice(IngredientRarity ingredientRarity)
     {

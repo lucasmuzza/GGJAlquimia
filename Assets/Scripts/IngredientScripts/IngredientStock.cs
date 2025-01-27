@@ -22,20 +22,28 @@ public class IngredientStock : MonoBehaviour
     [SerializeField] private List<IngredientSO> commonIngredientPool;
     [SerializeField] private List<IngredientSO> rareIngredientPool;
 
+    private GameplayView _gameplayView;
+
 
     private void Awake()
     {
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            // DontDestroyOnLoad(instance);
         }
         else
         {   
             Destroy(gameObject);
         }
 
+        _gameplayView = FindFirstObjectByType<GameplayView>();
         SelectInitialStock(initialIngredientsAmount);
+    }
+
+    private void Start()
+    {
+        
     }
 
     /// <summary>
@@ -45,6 +53,8 @@ public class IngredientStock : MonoBehaviour
     public void AddIngredientToStock(IngredientSO ingredientToAdd)
     {
         currentStock.Add(ingredientToAdd);
+        _gameplayView.AddIngredientToDisplay(ingredientToAdd);
+
     }
 
     /// <summary>
@@ -54,6 +64,7 @@ public class IngredientStock : MonoBehaviour
     public void RemoveIngredientFromStock(IngredientSO ingredientToRemove)
     {
         currentStock.Remove(ingredientToRemove);
+        _gameplayView.RemoveIngredientFromDisplay(ingredientToRemove);
     }
 
     /// <summary>

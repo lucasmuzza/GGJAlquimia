@@ -158,6 +158,7 @@ MonoBehaviour:
   - PotionView
   - ClientView
   isGamePaused: 0
+  hasLost: 0
   optionsMenu: {fileID: 8859984}
   orderSucessAmount: 0
   orderFailedAmount: 0
@@ -811,9 +812,9 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: bc9e5a52dd297694fa82c5087b93b1ca, type: 3}
     audioTypeName: Bubble
   - audioClip: {fileID: 8300000, guid: caaebaebaf3f77247b70e217a4bcfef9, type: 3}
-    audioTypeName: PotionSucess
+    audioTypeName: ClientHappy
   - audioClip: {fileID: 8300000, guid: 1f819817abea74f4ca00f7764398e5ad, type: 3}
-    audioTypeName: PotionFailed
+    audioTypeName: ClientSad
   - audioClip: {fileID: 8300000, guid: affaa96d65af57d4cbe7bec790a059b9, type: 3}
     audioTypeName: Money
   - audioClip: {fileID: 8300000, guid: 241642de3c3ec3c428db9aa69b9e36b8, type: 3}
@@ -1634,7 +1635,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManagerInstance: {fileID: 8859988}
+  stockManager: {fileID: 1373752222}
+  ingredientsTypes:
+  - {fileID: 11400000, guid: 483c227bd2998254a8f31f376c77c63c, type: 2}
+  - {fileID: 11400000, guid: 169ec5f705708ea449dcb7b93aa3e7e8, type: 2}
+  - {fileID: 11400000, guid: 78f7cc2a04cdcec4cadc39434de3cafd, type: 2}
+  - {fileID: 11400000, guid: 9428a01c9ba240747840161da02d98dc, type: 2}
+  - {fileID: 11400000, guid: fe8f8c9575cea474eaf890ed01a61b7d, type: 2}
+  - {fileID: 11400000, guid: 0638b7ac98098c74bb595c36ca39db78, type: 2}
+  - {fileID: 11400000, guid: c2ca66187034b5046a0a15ba01f82b3f, type: 2}
+  - {fileID: 11400000, guid: 37cad5db62caf8249ab6c719c8890852, type: 2}
+  - {fileID: 11400000, guid: c2ee28bbc5f887b40a43cfdcd1deaa8e, type: 2}
+  - {fileID: 11400000, guid: 1ff483d81341cc9448e948f429ee28d3, type: 2}
+  - {fileID: 11400000, guid: ed703040666c1de45874a7362bcc8d89, type: 2}
   gameplayUIDoc: {fileID: 1757536504}
+  igredientStockTemplate: {fileID: 9197481963319205126, guid: 520b676a6b71fe94bb346393974ca50b, type: 3}
 --- !u!114 &1757536504
 MonoBehaviour:
   m_ObjectHideFlags: 0
