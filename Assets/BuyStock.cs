@@ -27,6 +27,7 @@ public class BuyStock : MonoBehaviour
     private Label _offerIngredientPrice;
 
     private Button _buyButton;
+    private BubbleManager bubbleManager;
 
     public PlayerInputHandler playerInputHandler;
 
@@ -55,6 +56,7 @@ public class BuyStock : MonoBehaviour
     {
         scoreManager = ScoreManager.instance;
         audioManager = AudioManager.instance;
+        bubbleManager = BubbleManager.instance;
 
         merchantUIDoc = GetComponent<UIDocument>();
         _rootVisualElement = merchantUIDoc.rootVisualElement;
@@ -139,6 +141,7 @@ public class BuyStock : MonoBehaviour
 
             // Add the purchased ingredient to the stock
             stockManager.AddIngredientToStock(ingredient);
+            bubbleManager.AddBubble(ingredient);
 
             audioManager.PlaySound("Money");
 

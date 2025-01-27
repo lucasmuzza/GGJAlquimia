@@ -16,6 +16,8 @@ public class Cauldron : MonoBehaviour
     public List<IngredientSO> ingredientsToMix = new List<IngredientSO>();
     public Material _cauldronMat;
 
+    private GameManager _gameManager;
+
     private VisualElement _rootVisualElement;
     private VisualElement _ingredientsIconsContainer;
 
@@ -32,6 +34,8 @@ public class Cauldron : MonoBehaviour
         cauldronUIDoc = GetComponent<UIDocument>();
         _rootVisualElement = cauldronUIDoc.rootVisualElement;
 
+        _gameManager = GameManager.instance;
+
         _audioManager = AudioManager.instance;
 
         potionOrderManager = PotionOrderManager.instance;
@@ -39,7 +43,7 @@ public class Cauldron : MonoBehaviour
 
         AudioSource cauldronAudio = this.gameObject.AddComponent<AudioSource>();
         _cauldronAudioClip = _audioManager.GetSound("Cauldron");
-        
+
         cauldronAudio.clip = _cauldronAudioClip;
         cauldronAudio.loop = true;
         cauldronAudio.playOnAwake = true;
@@ -57,19 +61,40 @@ public class Cauldron : MonoBehaviour
     {
         Debug.Log($"The ingredient to add is {ingredient}");
 
+        // Check if the ingredient is part of the current potion recipe
+        if (!potionRecipe.ingredients.Contains(ingredient))
+        {
+            Debug.Log($"Ingredient {ingredient.name} is not part of the recipe.");
+            HandleFailedPotion();
+            return; 
+        }
+
+        // Check for duplicates in the current cauldron (ingredientsToMix list)
+        if (ingredientsToMix.Contains(ingredient))
+        {
+            Debug.Log($"Ingredient {ingredient.name} is already added.");
+            HandleFailedPotion();
+            return; 
+        }
+
+        
         ingredientsToMix.Add(ingredient);
-        AddIngredientsIcon(ingredient);
+        AddIngredientsIcon(ingredient); 
 
-        _cauldronMat.SetFloat("_SplashTime",Time.time);
-        _cauldronMat.SetColor("_ColorA",_cauldronMat.GetColor("_ColorB"));
-        _cauldronMat.SetColor("_ColorB", new Vector4(Random.value,Random.value,Random.value,1));
+       
+        _cauldronMat.SetFloat("_SplashTime", Time.time);
+        _cauldronMat.SetColor("_ColorA", _cauldronMat.GetColor("_ColorB"));
+        _cauldronMat.SetColor("_ColorB", new Vector4(Random.value, Random.value, Random.value, 1));
 
+        // Play sound effect for ingredient drop
         _audioManager.PlaySound("CauldronDrop");
+
+        // Check if the potion is ready to be brewed
         CheckPotionReady();
     }
 
     public void AddIngredientsIcon(IngredientSO ingredient)
-    {   
+    {
         var ingredientIcon = ingredientIconTemplate.Instantiate();
 
         // Query the ingredientIcon from the template
@@ -79,7 +104,7 @@ public class Cauldron : MonoBehaviour
         {
             // Set the icon background image based on the ingredient's icon.
             icon.style.backgroundImage = new StyleBackground(ingredient.ingredientIcon);
-            
+
             // Add the icon to the container
             _ingredientsIconsContainer.Add(ingredientIcon);
         }
@@ -88,6 +113,7 @@ public class Cauldron : MonoBehaviour
             Debug.LogError("ingredientIcon template could not be found.");
         }
     }
+
     public void ClearIngredientsIcon()
     {
         _ingredientsIconsContainer.Clear();
@@ -122,26 +148,41 @@ public class Cauldron : MonoBehaviour
 
     private bool AreIngredientsExactMatch()
     {
-        // Create a copy of the recipe ingredients to check against
-        List<IngredientSO> recipeIngredients = new List<IngredientSO>(potionRecipe.ingredients);
+        // Create dictionaries for the recipe ingredients and the mixed ingredients
+        Dictionary<IngredientSO, int> recipeIngredientCounts = GetIngredientCounts(potionRecipe.ingredients);
+        Dictionary<IngredientSO, int> mixedIngredientCounts = GetIngredientCounts(ingredientsToMix);
 
-        // Iterate through the mixed ingredients
-        foreach (IngredientSO ingredient in ingredientsToMix)
+        // Compare the two dictionaries
+        foreach (var pair in recipeIngredientCounts)
         {
-            if (recipeIngredients.Contains(ingredient))
+            // Check if the mixed ingredients contain the recipe ingredient with the exact count
+            if (!mixedIngredientCounts.TryGetValue(pair.Key, out int count) || count != pair.Value)
             {
-                // Remove the ingredient from the temporary list if it matches
-                recipeIngredients.Remove(ingredient);
-            }
-            else
-            {
-                // If an ingredient is not part of the recipe, it's an incorrect match
-                return false;
+                return false; // Mismatch found
             }
         }
 
-        // If the temporary recipe list is empty, it's an exact match
-        return recipeIngredients.Count == 0;
+        // Ensure no extra ingredients in the mixed ingredients
+        return recipeIngredientCounts.Count == mixedIngredientCounts.Count;
+    }
+
+    private Dictionary<IngredientSO, int> GetIngredientCounts(List<IngredientSO> ingredients)
+    {
+        Dictionary<IngredientSO, int> ingredientCounts = new Dictionary<IngredientSO, int>();
+
+        foreach (var ingredient in ingredients)
+        {
+            if (ingredientCounts.ContainsKey(ingredient))
+            {
+                ingredientCounts[ingredient]++;
+            }
+            else
+            {
+                ingredientCounts[ingredient] = 1;
+            }
+        }
+
+        return ingredientCounts;
     }
 
     private void HandleFailedPotion()
@@ -152,42 +193,37 @@ public class Cauldron : MonoBehaviour
 
         potionOrderManager.GenerateOrder();
 
+        _gameManager.orderFailedAmount++;
+
         OnPotionUnmatched?.Invoke();
     }
 
-private IEnumerator HandleSuccessfulPotion(float waitTime)
-{
-    yield return new WaitForSeconds(waitTime);
-
-    // Clear ingredients and icons after the wait time
-    ClearIngredientsIcon();
-    ingredientsToMix.Clear();
-
-    // Add score based on the recipe rarity level
-    ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
-
-    potionOrderManager.GenerateOrder();
-    // Reset potion ready flag
-    _potionReady = false;
-}
-
-    private IEnumerator WaitToClear(float waitTime)
+    private IEnumerator HandleSuccessfulPotion(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+
+        // Clear ingredients and icons after the wait time
         ClearIngredientsIcon();
+        ingredientsToMix.Clear();
+
+        // Add score based on the recipe rarity level
         ScoreManager.instance.AddScore(potionRecipe.recipeRarityLevel);
+
+        _gameManager.orderSucessAmount++;
+
+        potionOrderManager.GenerateOrder();
+        // Reset potion ready flag
         _potionReady = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Bubble"))
+        if (other.gameObject.CompareTag("Bubble"))
         {
             _audioManager.PlaySound("CauldronDrop");
             IngredientSO ingredient = other.gameObject.GetComponent<Ingredient>().ingredient;
             AddIngredient(ingredient);
             Destroy(other.gameObject);
         }
-        
     }
 }

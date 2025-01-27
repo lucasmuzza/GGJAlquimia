@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/RebidingView.uss?fileID=7433441132597879392&amp;guid=f553480880dcd384da618fabe3ec9cfc&amp;type=3#RebidingView" />
+    <engine:VisualElement name="root" style="flex-grow: 1;">
+        <engine:VisualElement name="loseContainer" style="flex-grow: 1; color: rgb(27, 27, 27); background-color: rgb(20, 21, 24);">
+            <engine:Label text="Você Perdeu!!! Obrigado por testar o jogo!!" style="flex-shrink: 1; flex-grow: 0; align-self: center; justify-content: center; align-items: center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 91px; top: 300px;" />
+            <engine:Button text="Menu Principal" name="MainMenuButton" class="UIButtons" style="top: 450px;" />
+            <engine:Button text="Sair" name="QuitButton" class="UIButtons" style="top: 450px;" />
+            <engine:Label text="Label" name="TimerLabel" style="color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/Fonts/BiedermeierKursiv.ttf?fileID=12800000&amp;guid=173d882a78efca549a133ce5c2a60aef&amp;type=3#BiedermeierKursiv&quot;); font-size: 65px; -unity-text-align: middle-center; top: 50px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -14,6 +14,7 @@ public class PotionOrderManager : MonoBehaviour
     public PotionOrder potionOrder;
 
     private AudioManager _audioManager;
+    private GameManager _gameManager;
 
     private GameplayView _gameplayView;
 
@@ -50,15 +51,21 @@ public class PotionOrderManager : MonoBehaviour
     {
         _audioManager = AudioManager.instance;
 
+        _gameManager = GameManager.instance;
+
         _gameplayView = FindFirstObjectByType<GameplayView>();
 
-        _gameplayUIDoc = _gameplayView.gameplayUIDoc;
+        if(_gameplayView != null) _gameplayUIDoc = _gameplayView.gameplayUIDoc;
+        else {Debug.Log("Couldnt find the gameplay view");};
 
         _rootVisualElement = _gameplayUIDoc.rootVisualElement; 
 
-        _orderContainer = _rootVisualElement.Q<VisualElement>("OrderContainer"); 
 
-        _dropClientButton = _orderContainer.Q<Button>("DropClientButton");
+        VisualElement _orders = _rootVisualElement.Q<VisualElement>("Orders");
+
+        _orderContainer = _orders.Q<VisualElement>("orderContainer"); 
+
+        _dropClientButton = _orders.Q<Button>("DropClientButton");
 
         _dropClientButton.clicked += OrderFailed;
 
@@ -89,11 +96,12 @@ public class PotionOrderManager : MonoBehaviour
         var order = orderTemplate.Instantiate();
 
         // Populate the order details
+
+        _orderSpriteImage = order.Q<VisualElement>("orderImage");
+        _orderSpriteImage.style.backgroundImage = new StyleBackground(potionOrder.potionSprite);
+
         _orderNameLabel = order.Q<Label>("OrderNameLabel");
         _orderNameLabel.text = potionOrder.potionName;
-
-        _orderDescriptionLabel = order.Q<Label>("OrderDescriptionLabel");
-        _orderDescriptionLabel.text = potionOrder.potionDescription;
 
         // Add the new order to the order container
         _orderContainer.Add(order);

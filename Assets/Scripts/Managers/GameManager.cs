@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(OptionsMenu))]
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
         {
             // Lose the game
             timer.StopTimer();
+            SceneManager.LoadScene("LoseScene");
         }
     }
 

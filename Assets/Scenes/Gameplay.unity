@@ -540,7 +540,7 @@ MonoBehaviour:
   ingredientPrice: 0
   levelOnePrice: 25
   levelTwoPrice: 0
-  levelThreePrice: 500
+  levelThreePrice: 200
 --- !u!1 &991916548
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,9 +930,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialIngredientsStock: []
   currentStock: []
-  initialIngredientsAmount: 20
-  commonProbability: 0.65
-  rareProbability: 0.35
+  initialIngredientsAmount: 30
+  commonProbability: 0.55
+  rareProbability: 0.45
   commonIngredientPool:
   - {fileID: 11400000, guid: c2ee28bbc5f887b40a43cfdcd1deaa8e, type: 2}
   - {fileID: 11400000, guid: 483c227bd2998254a8f31f376c77c63c, type: 2}

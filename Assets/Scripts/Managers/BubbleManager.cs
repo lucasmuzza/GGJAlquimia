@@ -65,9 +65,11 @@ public class BubbleManager : MonoBehaviour
     {
         List<IngredientSO> tempBubbles = new List<IngredientSO>(_ingredientsForBubbles);
 
-        for (int i = 0; i < maxBubblesAmount; i++)
+        // Ensure we have enough bubbles in the pool
+        while (_generatedBubbles.Count < maxBubblesAmount)
         {
-            AddBubble(tempBubbles[i]);
+            IngredientSO ingredient = tempBubbles[Random.Range(0, tempBubbles.Count)];
+            AddBubble(ingredient);
         }
     }
 
@@ -105,13 +107,13 @@ public class BubbleManager : MonoBehaviour
         bubble.SetActive(false); // Deactivate the bubble
         bubble.transform.position = startWaypoint.position; // Reset position
 
-        // Re-enqueue the bubble
+        // Re-enqueue the bubble for reuse
         bubbleQueue.Enqueue(bubble);
     }
 
     private IEnumerator ActivateBubblesWithInterval()
     {
-        while (bubbleQueue.Count > 0)
+        while (_generatedBubbles.Count > 0)
         {
             // Pause the coroutine if spawning is paused
             while (isSpawningPaused)
@@ -119,12 +121,20 @@ public class BubbleManager : MonoBehaviour
                 yield return null; // Wait until the game is unpaused
             }
 
-            // Get the next bubble from the queue
-            GameObject bubble = bubbleQueue.Dequeue();
-            bubble.SetActive(true); // Activate the bubble
+            if (bubbleQueue.Count > 0)
+            {
+                // Get the next bubble from the queue
+                GameObject bubble = bubbleQueue.Dequeue();
+                bubble.SetActive(true); // Activate the bubble
 
-            // Wait for the spawn interval before activating the next bubble
-            yield return new WaitForSeconds(spawnInterval);
+                // Wait for the spawn interval before activating the next bubble
+                yield return new WaitForSeconds(spawnInterval);
+            }
+            else
+            {
+                // If there are no bubbles in the queue, wait a bit before checking again
+                yield return null;
+            }
         }
     }
 
@@ -190,3 +200,4 @@ public class BubbleManager : MonoBehaviour
         currentBubblesAmount--;
     }
 }
+

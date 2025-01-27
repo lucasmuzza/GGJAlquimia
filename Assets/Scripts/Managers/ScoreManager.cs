@@ -26,6 +26,8 @@ public class ScoreManager : MonoBehaviour
 
         _audioManager = AudioManager.instance;
 
+        score = 50;
+
         _cauldron.OnPotionMatched.AddListener(AddScore);
     }
 
